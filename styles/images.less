@@ -1,0 +1,51 @@
+.cover {
+  background-position: center left;
+  background-size: 100% auto;
+  padding-bottom: 100px;
+  padding-top: 100px;
+
+  @media @mobile {
+    background-size: auto 100% !important;
+
+
+  }
+}
+
+.icon {
+  width: 40px;
+  height: 40px;
+  background-repeat: no-repeat;
+  background-size: 40px 40px;
+  display: inline-block;
+  vertical-align: middle;
+
+  &.small {
+    width: 20px;
+    height: 20px;
+    background-size: 20px 20px;
+  }
+
+  &.clickable {
+    cursor: pointer;
+  }
+
+  &:hover {
+    background-color: @bg-grey;
+  }
+
+  &.ic_close {
+    background-image: url(/assets/ic_close@2x.png);
+  }
+
+  &.ic_menu {
+    background-image: url(/assets/ic_menu@2x.png);
+  }
+
+  &.ic_next {
+    background-image: url(/assets/ic_next@2x.png);
+  }
+
+  &.ic_prev {
+    background-image: url(/assets/ic_prev@2x.png);
+  }
+}

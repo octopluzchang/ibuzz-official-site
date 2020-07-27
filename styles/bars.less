@@ -1,0 +1,182 @@
+.header {
+  background-color: white;
+  box-shadow: @shadow;
+  padding: 0.5em 0.8em;
+
+  .headerNavItem {
+    padding: 0 1em;
+  }
+
+  .nuxt-link-active {
+    position: relative;
+
+    &::after {
+      content: ' ';
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: -30px;
+      position: absolute;
+      border: 10px solid white;
+      border-color: transparent;
+      border-top-color: white;
+      z-index: 1;
+    }
+  }
+}
+
+
+
+.navBar {
+  padding: 1em 0;
+  background-color: transparent;
+  position: absolute;
+  width: 100%;
+  z-index: 11;
+  .row {
+    margin: 0;
+  }
+  a {
+    color: black;
+  }
+
+  .navItem {
+    position: relative;
+    display: inline-block;
+    margin-right: 5px;
+
+    & > a {
+      position: relative;
+      display: inline-block;
+      padding: 1em;
+      border-bottom: 3px solid transparent;
+
+      &:hover {
+        border-bottom: 3px solid transparent;
+      }
+
+      &.nuxt-link-active {
+        border-bottom: 3px solid black;
+      }
+
+      &.nuxt-link-active ~ .navMenu {
+        display: none;
+      }
+
+    }
+
+
+
+    .navMenu {
+      display: none;
+      position: absolute;
+      white-space: nowrap;
+      z-index: 10;
+      background-color: white;
+      box-shadow: @shadow;
+      text-align: left;
+      right: 0;
+      a {
+        padding: 1em 2em;
+      }
+      &:hover {
+        display: block;
+      }
+    }
+
+    &:hover {
+      .navMenu {
+        display: block;
+      }
+    }
+
+  }
+
+  .top-sticky {
+    background-color: white;
+    border-bottom: 1px solid @light-grey;
+  }
+
+}
+
+#banner {
+  position: relative;
+  background-color: @bg-grey;
+  box-shadow: inset 0 0 10px @light-grey;
+  padding-top: 100px;
+  background: repeating-linear-gradient(to right,
+      darken(@bg-grey, 5%),
+      darken(@bg-grey, 5%) 1px,
+      @bg-grey 1px,
+      @bg-grey 4px);
+}
+
+#pageNavBar {
+  padding: 1em;
+  white-space: nowrap;
+  .row {
+    margin: 0;
+  }
+  .divider {
+    border-right: 2px solid @light-grey;
+  }
+}
+
+#footer {
+  a {
+    color: @light-grey;
+    &:hover {
+      color: white;
+    }
+  }
+}
+
+#mobileNavMenu {
+  padding: 2em;
+  position: fixed;
+  width: 100%;
+  background-color: white;
+  z-index: 10;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  overflow: auto;
+}
+
+.sideBarWrapper {
+  position: absolute;
+  width: 100%;
+  pointer-events: none;
+
+  .wrapper {
+    padding: 0;
+    overflow: hidden;
+  }
+}
+
+#sideBar {
+  pointer-events: all;
+  padding: 2em;
+  z-index: 1;
+  background-color: white;
+  width: 250px;
+  min-height: 100vh;
+  box-shadow: 0 0 10px @light-grey;
+  .list.links {
+    & > a {
+      color: @dark-grey;
+      display: block;
+      padding: 0.5em;
+      border-left: 5px solid transparent;
+      &:hover {
+        text-decoration: none;
+        color: black;
+        background-color: transparent;
+      }
+    }
+    .nuxt-link-active {
+      background-color: transparent;
+      border-left: 5px solid @highlight;
+    }
+
+  }
+}

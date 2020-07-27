@@ -1,0 +1,46 @@
+a {
+  color: black;
+  text-shadow: none;
+
+  &.main {
+    font-weight: bold;
+    color: @highlight;
+    &:hover {
+    color: lighten(@highlight, 10%);
+  }
+  }
+  & > * {
+    margin: 0;
+  }
+  &.disabled {
+    opacity: 0.2;
+    pointer-events: none;
+  }
+  &:hover {
+    color: lighten(black, 10%);
+    text-decoration: none;
+  }
+  &.button {
+    padding: 0.8em 1em;
+    display: inline-block;
+    text-align: center;
+    background-color: @dark-grey;
+    color: white !important;
+    &.large {
+      font-size: 2em;
+      font-weight: bold;
+    }
+    &:hover {
+      text-decoration: none;
+      background: black;
+    }
+    &.main {
+      background-color: @main;
+      &:hover {
+        background-color: darken(@main, 10%);
+      }
+    }
+
+  }
+
+}

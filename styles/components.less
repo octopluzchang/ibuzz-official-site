@@ -1,0 +1,83 @@
+.card {
+  padding: 1.5em;
+  min-height: 350px;
+  margin-bottom: 2em;
+  display: flex;
+  flex-direction: column;
+  .cardContent {
+    flex: 1;
+    img {
+      height: 100px;
+      width: auto;
+    }
+  }
+  @media @mobile {
+    min-height: 150px;
+    flex-direction: row;
+  }
+}
+
+.tag {
+  padding: 0.5em 1em;
+  border: 2px solid @highlight;
+  color: @highlight;
+  display: inline-block;
+  font-weight: bold;
+}
+
+.tocContainer {
+  height: 100px;
+  overflow: hidden;
+  position: relative;
+  &::after {
+    content: ' ';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 50%, rgba(255,255,255,0) 100%);
+  }
+  a {
+    position: absolute;
+    z-index: 1;
+    bottom: 0px;
+  }
+  &.open {
+    height: auto;
+    &::after, a {
+      display: none;
+    }
+  }
+}
+
+#contactForm {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  overflow: auto;
+  .wrapper {
+    max-width: 800px;
+  }
+  .card {
+    margin-top: 50px;
+    padding: 2.5em;
+    height: auto;
+    @media @mobile {
+    flex-direction: column;
+  }
+  }
+  .formBG {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background-color: black;
+    opacity: 0.8;
+  }
+}

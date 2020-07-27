@@ -1,0 +1,51 @@
+//Media Queries
+@desktop: ~"only screen and (min-width: 1040px)";
+@tablet: ~"only screen and (max-width: 800px)";
+@mobile: ~"only screen and (max-width: 610px)";
+.mobileOnly {
+    display: none !important;
+    @media @mobile {
+        display: block !important;
+    }
+}
+
+.desktopOnly {
+    @media @mobile {
+        display: none !important;
+    }
+}
+* {
+  box-sizing: border-box;
+  background-repeat: no-repeat;
+  outline: none;
+}
+
+body {
+  margin: 0;
+}
+
+img {
+  width: 100%;
+}
+
+.freeze {
+  overflow: hidden;
+}
+
+@highlight: #0067ff;
+@main: #eb4c49;
+@bg-grey: #f7f7f7;
+@light-grey: #c9c9c9;
+@dark-grey: #2f2f2f;
+@shadow: 0 5px 5px fade(@dark-grey, 50%);
+
+
+@import "container.less";
+@import "components.less";
+@import "content.less";
+@import "buttons.less";
+@import "form.less";
+@import "bars.less";
+@import "images.less";
+@import "typography.less";
+
