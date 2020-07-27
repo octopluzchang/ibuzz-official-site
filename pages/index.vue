@@ -1,11 +1,11 @@
 <template>
   <div>
-    <div class="section dark">
+    <div class="section" id="banner">
       <div class="wrapper">
         <div class="row">
           <div class="col-lg-6">
             <h1 class="title">
-              i-Buzz 商業應用報告
+              i-Buzz {{this.$route.params.products}}
             </h1>
             <h4>
               深入淺出的專業分析提供最精確的數據、最有價值的發現與建議
@@ -77,23 +77,23 @@
           </div>
         </div>
         <div class="row">
-          <div class="col">
+          <div class="col-md col-sm-4">
             <h4>ID分析</h4>
             <p>透過語料線索與機器自動化學習，探索討論主題ID之人口結構與生活型態等分佈情況。</p>
           </div>
-          <div class="col">
+          <div class="col-md col-sm-4">
             <h4>類聚分析</h4>
             <p>依據文體與熱詞相似性，自動分類相關話題之討論主軸，快速歸納該主題重點面向為何。</p>
           </div>
-          <div class="col">
+          <div class="col-md col-sm-4">
             <h4>趨勢分析</h4>
             <p>計算關鍵詞與整體產業相對之變化量，找出可能潛在之產業趨勢變化。</p>
           </div>
-          <div class="col">
+          <div class="col-md col-sm-4">
             <h4>關聯分析</h4>
             <p>以指向性相關係數挖掘出與主題最相關之字詞，找出潛在對手與未被發現的消費者需求。</p>
           </div>
-          <div class="col">
+          <div class="col-md col-sm-4">
             <h4>情緒分析</h4>
             <p>系統自動化判別消費者情緒程度，以探討消費者對該主題各面向之觀感。</p>
           </div>
@@ -115,5 +115,9 @@
 </template>
 
 <script>
-export default {}
+export default {
+  created: function () {
+    this.$store.commit('updateProductIndex', this.$route.params.products)
+  }
+}
 </script>
