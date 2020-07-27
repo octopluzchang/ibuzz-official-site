@@ -74,7 +74,7 @@
                   <hr>
                   <div v-for="(service, serviceIndex) in $store.state.products[0].services">
                     <ul class="list links">
-                      <nuxt-link :to="'/' + service.title">
+                      <nuxt-link :to="'/' + $store.state.products[$store.state.selectedProduct].name +'/' + service.title">
                         <li>
                           <h6>{{service.title}}</h6>
                         </li>
@@ -82,11 +82,11 @@
                     </ul>
 
                     <ul class="list links row" @click="showMenu = false">
-                      <nuxt-link :to="'/' + service.title + '/' + feature.title" v-for="feature in service.features" class="col-6">
-                        <li>
-                          {{feature.title}}
-                        </li>
-                      </nuxt-link>
+                      <nuxt-link :to="'/' + $store.state.products[$store.state.selectedProduct].name +'/' + service.title + '/' + feature.title" v-for="(feature,featureIndex) in service.features" @click.native="$store.commit('getFeatureIndex', featureIndex)">
+                      <li>
+                        {{feature.title}}
+                      </li>
+                    </nuxt-link>
                     </ul>
                     <hr>
                   </div>
