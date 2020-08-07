@@ -5,7 +5,7 @@
       <nuxt id="main"/>
     </div>
     <Footer/>
-    <Form id="contactForm" v-show="$store.state.showForm"/>
+    <Form id="contactForm" v-if="$store.state.showForm"/>
   </div>
 </template>
 
@@ -30,5 +30,6 @@
         currentServiceIndex: 0
       }
     },
+    middleware: 'product404'
   }
 </script>

@@ -51,6 +51,21 @@
   }
 }
 
+.tabContainer {
+  .tab {
+    opacity: 0.5;
+    border-left: 10px solid transparent;
+    padding-left: 20px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    &.active {
+      border-left-color: @dark-grey;
+      cursor: auto;
+      opacity: 1;
+    }
+  }
+}
+
 #contactForm {
   position: fixed;
   width: 100%;

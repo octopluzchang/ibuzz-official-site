@@ -52,17 +52,39 @@
         <h3>所需服務</h3>
         <div class="section">
           <select v-model="selectedProduct">
-           <option :value="productIndex" v-for="(product, productIndex) in $store.state.products">
+           <option :value="productIndex" v-for="(product, productIndex) in $store.state.products" v-if="productIndex<2">
              {{product.name}}
            </option>
          </select>
         </div>
-        <div class="section" v-for="service in $store.state.products[selectedProduct].services">
+        <div class="section" v-for="service in $store.state.products[selectedProduct].services" v-if="selectedProduct==0">
           <h4>{{service.title}}</h4>
           <div class="section light">
             <div class="row">
               <div class="col-sm-4" v-for="feature in service.features">
                 <label><input type="checkbox"> {{feature.title}}</label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div v-for="(feature, featureIndex) in $store.state.products[1].services[2].features" v-if="selectedProduct==1">
+          <div class="section" v-if="featureIndex<2">
+            <h4>{{feature.title}}</h4>
+            <div class="section light">
+              <div class="row">
+                <div class="col-sm-4" v-for="report in feature.reports">
+                  <label><input type="checkbox"> {{report.title}}</label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="section" v-for="report in feature.reports" v-else>
+            <h4>{{report.title}}</h4>
+            <div class="section light">
+              <div class="row">
+                <div class="col-sm-4" v-for="func in report.funcs">
+                  <label><input type="checkbox"> {{func.name}}</label>
+                </div>
               </div>
             </div>
           </div>
@@ -93,5 +115,8 @@ export default {
         selectedProduct: 0,
       }
     },
+  created: function () {
+    this.selectedProduct = this.$store.state.selectedProduct
+  }
   }
 </script>

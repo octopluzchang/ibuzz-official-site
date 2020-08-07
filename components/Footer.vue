@@ -23,7 +23,7 @@
         </div>
       </div>
     </div>
-    <div class="section light" v-if="this.$route.params.services" id="pageNavBar">
+    <div class="section light" v-if="$route.path.split('/').length != 2" id="pageNavBar">
       <div class="wrapper">
         <div class="row">
           <div class="col">
@@ -41,7 +41,7 @@
           </div>
           <div class="divider"></div>
           <div class="col">
-            <div class="row justify-content-start" v-if="$store.state.selectedService != 6">
+            <div class="row justify-content-start" v-if="$store.state.selectedService != $store.state.products[$store.state.selectedProduct].services.length-1">
               <div class="col-sm-auto col">
                 <div class="text-left">
                   <div class="small">下一個主題</div>

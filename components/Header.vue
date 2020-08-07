@@ -6,7 +6,7 @@
           <h4 class="mr-0">i-Buzz</h4>
         </div>
         <div class="headerNavContainer desktopOnly">
-          <nuxt-link :to="'/' + product.name" class="headerNavItem" v-for="(product, productIndex) in $store.state.products" @click.native="$store.commit('getProductIndex', productIndex)" :class="{disabled: !product.services.length}">{{product.name}}</nuxt-link>
+          <nuxt-link :to="'/' + product.name" class="headerNavItem" v-for="(product, productIndex) in $store.state.products" :class="{disabled: !product.services.length}">{{product.name}}</nuxt-link>
         </div>
       </div>
     </div>
@@ -14,15 +14,16 @@
       <div class="wrapper desktopOnly">
         <div class="row align-items-center">
           <div class="col-auto">
-           <nuxt-link :to="'/' + this.$route.params.products">
-            <b>{{this.$route.params.products}}</b>
+           <nuxt-link :to="'/' + $store.state.products[$store.state.selectedProduct].name">
+            <b>{{$store.state.products[$store.state.selectedProduct].name}}</b>
             </nuxt-link>
           </div>
           <div class="col">
             <div class="row align-items-center justify-content-end">
               <div class="navItem" v-for="(service, serviceIndex) in $store.state.products[$store.state.selectedProduct].services" @click="$store.commit('getServiceIndex', serviceIndex)">
-                <nuxt-link :to="'/' + $store.state.products[$store.state.selectedProduct].name +'/' + service.title">{{service.title}}</nuxt-link>
-                <div class="navMenu">
+                <nuxt-link :to="'/' + $store.state.products[$store.state.selectedProduct].name +'/' + service.title">{{service.title}}<span class="icon ic_dropdown small" v-show="service.childMenu"></span>
+                </nuxt-link>
+                <div class="navMenu" v-show="service.childMenu">
                   <ul class="list links">
                     <nuxt-link :to="'/' + $store.state.products[$store.state.selectedProduct].name +'/' + service.title + '/' + feature.title" v-for="(feature,featureIndex) in service.features" @click.native="$store.commit('getFeatureIndex', featureIndex)">
                       <li>

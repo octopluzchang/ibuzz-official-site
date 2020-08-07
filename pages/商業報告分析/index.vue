@@ -5,7 +5,7 @@
         <div class="row">
           <div class="col-lg-6">
             <h1 class="title">
-              i-Buzz {{this.$route.params.products}}
+              i-Buzz 商業報告分析
             </h1>
             <h4>
               深入淺出的專業分析提供最精確的數據、最有價值的發現與建議
@@ -117,7 +117,7 @@
 <script>
 export default {
   created: function () {
-    this.$store.commit('updateServiceIndex', this.$route.params.products)
+    this.$store.commit('updateProductIndex', '商業報告分析')
   }
 }
 </script>
