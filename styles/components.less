@@ -96,3 +96,61 @@
     opacity: 0.8;
   }
 }
+
+
+//Slick
+.slick-slider {
+  margin: 50px 0;
+}
+.slick-arrow {
+  height: 100px;
+  width: 40px;
+
+  z-index: 1;
+  &:hover {
+    background: inherit !important;
+  }
+  &::before {
+    content: '';
+    background: inherit;
+    display: block;
+    height: 100%;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    background-size: 40px 40px !important;
+  }
+}
+.slick-prev {
+
+
+
+  &::before {
+    background: url(/assets/ic_prev.png);
+  }
+}
+
+.slick-next {
+
+  &::before {
+    background: url(/assets/ic_next.png);
+  }
+}
+
+
+.slick-dots {
+  li > button {
+    background-color: @light-grey;
+    width: 20px;
+    height: 3px;
+    border-radius: 0%;
+    box-shadow: none;
+
+    &::before {
+      content: none;
+    }
+  }
+
+  li.slick-active > button {
+    background-color: @highlight;
+  }
+}

@@ -34,8 +34,7 @@ export default {
   /*
   ** Global CSS
   */
-  css: [
-  ],
+  css: ['vue-slick-carousel/dist/vue-slick-carousel.css', 'vue-slick-carousel/dist/vue-slick-carousel-theme.css'],
   /*
   ** Plugins to load before mounting the App
   ** https://nuxtjs.org/guide/plugins
@@ -43,7 +42,8 @@ export default {
   plugins: [
     { src: '~/plugins/vue-sticky-directive.js', ssr: false },
     { src: '~/plugins/vue-smooth-scroll.js' },
-    { src: '~/plugins/vue-scrollto.js' }
+    { src: '~/plugins/vue-scrollto.js' },
+    { src: './plugins/vue-slick.js' }
   ],
   /*
   ** Auto import components

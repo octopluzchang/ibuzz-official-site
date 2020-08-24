@@ -40,7 +40,8 @@ export const state = () => ({
                     ['企業本身分析',
                     '企業兩角分析'],
                     ['觀察總結與後續相關建議']
-                  ]
+                  ],
+                  imageNum: 2
                 },
                 {
                   title: '產業環境五力分析報告',
@@ -61,7 +62,8 @@ export const state = () => ({
 
                     ['聲佔率分析'],
                     ['評價分析'],
-                  ]
+                  ],
+                  imageNum: 2
                 }
               ],
               faqs: [
@@ -142,7 +144,8 @@ export const state = () => ({
                     [
                       '觀察總結與後續相關建議'
                     ]
-                  ]
+                  ],
+                  imageNum: 2
                 },
                 {
                   title: '跨事業體集團分析報告',
@@ -183,7 +186,8 @@ export const state = () => ({
                     [
                       '觀察總結與後續相關建議'
                     ]
-                  ]
+                  ],
+                  imageNum: 2
                 }
               ],
               faqs: [
@@ -253,7 +257,8 @@ export const state = () => ({
                     [
                       '觀察總結與後續相關建議'
                     ]
-                  ]
+                  ],
+                  imageNum: 2
                 },
                 {
                   title: '品牌PBI分析報告',
@@ -288,7 +293,8 @@ export const state = () => ({
                     [
                       '觀察總結與後續相關建議'
                     ]
-                  ]
+                  ],
+                  imageNum: 2
                 },
                 {
                   title: '品牌4P1S分析報告',
@@ -328,7 +334,8 @@ export const state = () => ({
                     [
                       '觀察總結與後續相關建議'
                     ]
-                  ]
+                  ],
+                  imageNum: 2
                 },
                 {
                   title: '品牌色彩人格分析報告',
@@ -362,7 +369,8 @@ export const state = () => ({
                     [
                       '觀察總結與後續相關建議'
                     ]
-                  ]
+                  ],
+                  imageNum: 2
                 },
                 {
                   title: '品牌心佔率分析報告',
@@ -391,7 +399,8 @@ export const state = () => ({
                     [
                       '觀察總結與後續相關建議'
                     ]
-                  ]
+                  ],
+                  imageNum: 2
                 }
               ],
               faqs: [
@@ -447,7 +456,8 @@ export const state = () => ({
                       '觀察總結與後續相關建議'
                     ]
 
-                  ]
+                  ],
+                  imageNum: 2
                 },
                 {
                   title: '產品心佔率分析報告',
@@ -476,7 +486,8 @@ export const state = () => ({
                       '觀察總結與後續相關建議'
                     ]
 
-                  ]
+                  ],
+                  imageNum: 2
                 }
               ],
               faqs: [
@@ -537,7 +548,8 @@ export const state = () => ({
                     [
                       '觀察總結與後續相關建議'
                     ]
-                  ]
+                  ],
+                  imageNum: 1
                 },
                 {
                   title: '危機事件洞察報告',
@@ -574,7 +586,8 @@ export const state = () => ({
                     [
                       '觀察總結與後續相關建議'
                     ]
-                  ]
+                  ],
+                  imageNum: 2
                 }
               ],
               faqs: [
@@ -643,7 +656,8 @@ export const state = () => ({
                     [
                       '分析總結與建議'
                     ]
-                  ]
+                  ],
+                  imageNum: 1
                 },
                 {
                   title: '生活型態族群分析報告',
@@ -693,7 +707,8 @@ export const state = () => ({
                     [
                       '觀察總結與後續相關建議'
                     ]
-                  ]
+                  ],
+                  imageNum: 1
                 }
               ],
               faqs: [
@@ -756,7 +771,8 @@ export const state = () => ({
                     [
                       '觀察總結與後續相關建議'
                     ]
-                  ]
+                  ],
+                  imageNum: 1
                 },
                 {
                   title: '消費滿意度分析報告',
@@ -791,7 +807,8 @@ export const state = () => ({
                     [
                       '觀察總結與後續相關建議'
                     ]
-                  ]
+                  ],
+                  imageNum: 1
                 },
                 {
                   title: '消費意見與行為分析報告',
@@ -820,7 +837,8 @@ export const state = () => ({
                     [
                       '觀察總結與後續相關建議'
                     ]
-                  ]
+                  ],
+                  imageNum: 1
                 },
               ],
               faqs: [
@@ -896,7 +914,8 @@ export const state = () => ({
                     [
                       '觀察總結與後續相關建議'
                     ]
-                  ]
+                  ],
+                  imageNum: 2
                 },
                 {
                   title: '活動社群與媒體成效調查報告',
@@ -929,7 +948,8 @@ export const state = () => ({
                     [
                       '觀察總結與後續相關建議'
                     ]
-                  ]
+                  ],
+                  imageNum: 2
                 }
               ],
               faqs: [
@@ -1013,7 +1033,8 @@ export const state = () => ({
                     [
                       '觀察總結與後續相關建議'
                     ]
-                  ]
+                  ],
+                  imageNum: 2
                 }
               ],
               faqs: [
@@ -1079,7 +1100,8 @@ export const state = () => ({
                     [
                       '觀察總結與後續相關建議'
                     ]
-                  ]
+                  ],
+                  imageNum: 2
                 }
               ],
               faqs: [
@@ -1153,7 +1175,8 @@ export const state = () => ({
                     [
                       '觀察總結與後續相關建議'
                     ]
-                  ]
+                  ],
+                  imageNum: 2
                 },
                 {
                   title: '產品市場定位分析報告',
@@ -1196,7 +1219,8 @@ export const state = () => ({
                     [
                       '觀察總結與後續相關建議'
                     ]
-                  ]
+                  ],
+                  imageNum: 1
                 }
               ],
               faqs: [
@@ -1260,7 +1284,8 @@ export const state = () => ({
                     [
                       '觀察總結與後續相關建議'
                     ]
-                  ]
+                  ],
+                  imageNum: 2
                 }
               ],
               faqs: [
@@ -1336,7 +1361,8 @@ export const state = () => ({
                     [
                       '觀察總結與後續相關建議'
                     ]
-                  ]
+                  ],
+                  imageNum: 2
                 },
                 {
                   title: 'WGS定位分析',
@@ -1370,7 +1396,8 @@ export const state = () => ({
                     [
                       '觀察總結與後續相關建議'
                     ]
-                  ]
+                  ],
+                  imageNum: 2
                 },
                 {
                   title: '4P1S分析',
@@ -1405,7 +1432,8 @@ export const state = () => ({
                     [
                       '觀察總結與後續相關建議'
                     ]
-                  ]
+                  ],
+                  imageNum: 2
                 }
               ],
               faqs: [
@@ -1474,7 +1502,8 @@ export const state = () => ({
                     [
                       '觀察總結與後續相關建議'
                     ]
-                  ]
+                  ],
+                  imageNum: 2
                 },
                 {
                   title: '競品關聯分析',
@@ -1507,7 +1536,8 @@ export const state = () => ({
                     [
                       '觀察總結與後續相關建議'
                     ]
-                  ]
+                  ],
+                  imageNum: 2
                 }
               ],
               faqs: [
@@ -1590,7 +1620,8 @@ export const state = () => ({
                     [
                       '觀察總結與後續相關建議'
                     ]
-                  ]
+                  ],
+                  imageNum: 2
                 },
                 {
                   title: '戰略集團分析',
@@ -1632,7 +1663,8 @@ export const state = () => ({
                     [
                       '觀察總結與後續相關建議'
                     ]
-                  ]
+                  ],
+                  imageNum: 2
                 },
                 {
                   title: '產品組合管理分析',
@@ -1673,7 +1705,8 @@ export const state = () => ({
                     [
                       '觀察總結與後續相關建議'
                     ]
-                  ]
+                  ],
+                  imageNum: 2
                 },
               ],
               faqs: [
@@ -1743,7 +1776,8 @@ export const state = () => ({
                     [
                       '觀察總結與後續相關建議'
                     ]
-                  ]
+                  ],
+                  imageNum: 2
                 },
                 {
                   title: '廣告提案分析',
@@ -1788,7 +1822,8 @@ export const state = () => ({
                     [
                       '觀察總結與後續相關建議'
                     ]
-                  ]
+                  ],
+                  imageNum: 2
                 },
                 {
                   title: '意見領袖觀察與潛在意見領袖探索',
@@ -1821,7 +1856,8 @@ export const state = () => ({
                     [
                       '觀察總結與後續相關建議'
                     ]
-                  ]
+                  ],
+                  imageNum: 2
                 },
               ],
               faqs: [
@@ -1903,7 +1939,8 @@ export const state = () => ({
                     [
                       '觀察總結與後續相關建議'
                     ]
-                  ]
+                  ],
+                  imageNum: 2
                 },
                 {
                   title: '活動人潮分析報告',
@@ -1939,7 +1976,8 @@ export const state = () => ({
                     [
                       '觀察總結與後續相關建議'
                     ]
-                  ]
+                  ],
+                  imageNum: 2
                 }
               ],
               faqs: [
@@ -2007,7 +2045,8 @@ export const state = () => ({
                     [
                       '觀察總結與後續相關建議'
                     ]
-                  ]
+                  ],
+                  imageNum: 1
                 },
                 {
                   title: '品牌圖像輿情分析報告',
@@ -2044,7 +2083,8 @@ export const state = () => ({
                     [
                       '觀察總結與後續相關建議'
                     ]
-                  ]
+                  ],
+                  imageNum: 1
                 },
                 {
                   title: '事件圖像輿情分析報告',
@@ -2081,7 +2121,8 @@ export const state = () => ({
                     [
                       '觀察總結與後續相關建議'
                     ]
-                  ]
+                  ],
+                  imageNum: 1
                 },
                 {
                   title: '活動圖像輿情分析報告',
@@ -2118,7 +2159,8 @@ export const state = () => ({
                     [
                       '觀察總結與後續相關建議'
                     ]
-                  ]
+                  ],
+                  imageNum: 1
                 },
                 {
                   title: '受眾圖像輿情分析報告',
@@ -2155,7 +2197,8 @@ export const state = () => ({
                     [
                       '觀察總結與後續相關建議'
                     ]
-                  ]
+                  ],
+                  imageNum: 1
                 },
               ],
               faqs: [
@@ -2228,7 +2271,8 @@ export const state = () => ({
                     [
                       '觀察總結與後續相關建議'
                     ]
-                  ]
+                  ],
+                  imageNum: 2
                 },
                 {
                   title: '集團質量化洞察報告',
@@ -2272,7 +2316,8 @@ export const state = () => ({
                     [
                       '觀察總結與後續相關建議'
                     ]
-                  ]
+                  ],
+                  imageNum: 2
                 },
                 {
                   title: '品牌與產品質量化洞察報告',
@@ -2314,7 +2359,8 @@ export const state = () => ({
                     [
                       '觀察總結與後續相關建議'
                     ]
-                  ]
+                  ],
+                  imageNum: 2
                 },
                 {
                   title: '消費者質量化洞察報告',
@@ -2351,7 +2397,8 @@ export const state = () => ({
                     [
                       '觀察總結與後續相關建議'
                     ]
-                  ]
+                  ],
+                  imageNum: 2
                 }
               ],
               faqs: [
@@ -2416,7 +2463,8 @@ export const state = () => ({
                     [
                       '觀察總結與後續相關建議'
                     ]
-                  ]
+                  ],
+                  imageNum: 2
                 },
                 {
                   title: '政治人物質量化洞察報告',
@@ -2454,45 +2502,8 @@ export const state = () => ({
                     [
                       '觀察總結與後續相關建議'
                     ]
-                  ]
-                },
-                {
-                  title: '政治人物質量化洞察報告',
-                  excert: '',
-                  description: '洞察指定政治人物於論壇、新聞、社群三大來源中的能見度、粉絲互動度、好感度、民眾關注面向之異同性，提供公部門或研究單位民眾與媒體輿情現況參考，以利後續廣宣推廣企劃。',
-                  subjectsSum: '',
-                  subjects: [
-                    '政治人物不同來源之能見度排行與趨勢變化',
-                    '政治人物不同來源之熱門議題與民眾關注面向分析',
-                    '政治人物不同來源之好感度分析',
-                    '政治人物之社群粉絲互動度分析'
                   ],
-                  toc: [
-                    [
-                      '各標的政治人物簡介'
-                    ],
-                    [
-                      '各政治人物三大來源能見度排行與趨勢分析'
-                    ],
-                    [
-                      '各政治人物三大來源熱門頻道分析'
-                    ],
-                    [
-                      '各政治人物三大來源熱門議題分析'
-                    ],
-                    [
-                      '各政治人物三大來源民眾關注面向分析'
-                    ],
-                    [
-                      '各政治人物三大來源好感度分析'
-                    ],
-                    [
-                      '各政治人物社群粉絲互動度分析'
-                    ],
-                    [
-                      '觀察總結與後續相關建議'
-                    ]
-                  ]
+                  imageNum: 2
                 },
                 {
                   title: '行銷活動質量化洞察報告',
@@ -2531,7 +2542,8 @@ export const state = () => ({
                     [
                       '觀察總結與後續相關建議'
                     ]
-                  ]
+                  ],
+                  imageNum: 2
                 },
                 {
                   title: '議題、事件質量化洞察報告',
@@ -2568,7 +2580,8 @@ export const state = () => ({
                     [
                       '觀察總結與後續相關建議'
                     ]
-                  ]
+                  ],
+                  imageNum: 2
                 },
               ],
               faqs: [
