@@ -56,6 +56,11 @@
                       <p>
                         {{report.basicCaption}}
                       </p>
+                      <img :src="'/assets/images/img_' + $store.state.selectedProduct + '-' +
+                  $store.state.selectedService + '-' +
+                  $store.state.selectedFeature + '-' +
+                  reportIndex + '-1'
+                    + '.png'">
                   </div>
                 </div>
                 <div class="row mr-2">
@@ -72,6 +77,11 @@
                       <p>
                         {{report.advanceCaption}}
                       </p>
+                      <img :src="'/assets/images/img_' + $store.state.selectedProduct + '-' +
+                  $store.state.selectedService + '-' +
+                  $store.state.selectedFeature + '-' +
+                  reportIndex + '-2'
+                    + '.png'">
                   </div>
                 </div>
               </div>
