@@ -20,9 +20,9 @@
       <div class="wrapper">
         <div class="row">
          <div class="col-lg-6">
-            <img src="/assets/images/img_1-home-1.png" v-show="selectedTab==1">
-            <img src="/assets/images/img_1-home-2.png" v-show="selectedTab==2">
-            <img src="/assets/images/img_1-home-3.png" v-show="selectedTab==3">
+            <img src="/assets/images/img_2-home-1.png" v-show="selectedTab==1">
+            <img src="/assets/images/img_2-home-2.png" v-show="selectedTab==2">
+            <img src="/assets/images/img_2-home-3.png" v-show="selectedTab==3">
          </div>
           <div class="col-lg-6">
            <div class="tabContainer">
@@ -59,12 +59,12 @@
             <p>為何需要三層級資料庫？<br><br>分析一個品牌在產業中的表現，不僅是品牌的聲量觀察，而是要以品牌為核心，將品牌關鍵字下探至系列甚至是單一產品服務，才能綜觀品牌在產業中的表現，因此i-Buzz VOC+研發了三層級產業分析資料庫，分類管理產業中「品牌、系列與產品」各類關鍵字，讓使用者更方便進行產業調查。</p>
           </div>
           <div class="col-lg-6">
-            <img src="/assets/images/img_1-home-4.png">
+            <img src="/assets/images/img_2-home-4.png">
           </div>
         </div>
         <div class="row mr-2">
          <div class="col-lg-6">
-           <img src="/assets/images/img_1-home-5.png">
+           <img src="/assets/images/img_2-home-5.png">
          </div>
           <div class="col-lg-6">
             <h3>競品自動化分析報表 </h3>
@@ -77,12 +77,12 @@
             <p>為何需要專家語詞庫？<br><br>左邊是市面上常見自動斷詞的文字雲分析，僅能知道消費者最熱門的關鍵字的討論狀況，但需要更深入分析消費者Insight時，則無法針對特定主題找出分析重點。右邊是i-Buzz VOC+針對汽車產業建置的語意分析詞庫，依照消費者討論面向與行銷理論4P1S建置專家語詞庫，針對不同產業制定符合消費者討論現況之語意分析詞庫，藉以萃取出最精確消費者insight分析數據！</p>
           </div>
           <div class="col-lg-6">
-            <img src="/assets/images/img_1-home-6.png">
+            <img src="/assets/images/img_2-home-6.png">
           </div>
         </div>
         <div class="row mr-2">
          <div class="col-lg-6">
-           <img src="/assets/images/img_1-home-7.png">
+           <img src="/assets/images/img_2-home-7.png">
          </div>
           <div class="col-lg-6">
             <h3>商業策略分析模組 </h3>
@@ -95,7 +95,7 @@
             <p>為何需要彈性帳號管理？<br><br>各部門皆可使用的資料庫，各自管理帳號報表，多人多工提升資料庫使用效率，帳號提供兩大彈性應用，彈性一：i-Buzz提供客製化產業建置服務，各單位可選擇自己所需的觀測的產業與主題，建立專屬資料庫，無須與他人共用平台。彈性二：針對各部門單位可選擇所需的應用報表，提升平台使用效益，解決過去各部門將不同主題關鍵字設定在同一帳號，造成資料雜亂的問題。</p>
           </div>
           <div class="col-lg-6">
-            <img src="/assets/images/img_1-home-8.png">
+            <img src="/assets/images/img_2-home-8.png">
           </div>
         </div>
       </div>

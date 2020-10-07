@@ -34,7 +34,7 @@
             </div>
           </div>
           <div class="col-lg-4">
-            <img src="/assets/images/img_home-1.png">
+            <img src="/assets/images/img_0-home-1.png">
           </div>
           <div class="col-lg-4">
             <div>
@@ -189,7 +189,7 @@
     content: '';
     width: 50%;
     height: 50%;
-    background-image: url(/assets/images/img_home-2.png);
+    background-image: url(/assets/images/img_0-home-2.png);
     background-position: center;
     background-size: 100%;
     pointer-events: none;
