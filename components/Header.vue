@@ -4,7 +4,7 @@
       <div class="row align-items-center">
         <div class="col-auto">
 <h4 class="mr-0">
-          <nuxt-link to="/">i-Buzz</nuxt-link></h4>
+          <nuxt-link to="/" id="logo">i-Buzz</nuxt-link></h4>
         </div>
         <div class="headerNavContainer desktopOnly">
           <nuxt-link :to="'/' + product.name" class="headerNavItem" v-for="(product, productIndex) in $store.state.products" v-if="product.services.length">{{product.name}}</nuxt-link>

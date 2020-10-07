@@ -6,8 +6,12 @@
   .headerNavItem {
     padding: 0 1em;
   }
-
-  .nuxt-link-active {
+  #logo {
+    &::after {
+      content: none;
+    }
+  }
+  .nuxt-link-exact-active {
     position: relative;
 
     &::after {
@@ -53,7 +57,7 @@
         border-bottom: 3px solid transparent;
       }
 
-      &.nuxt-link-active {
+      &.nuxt-link-extact-active {
         border-bottom: 3px solid black;
         .icon {
           opacity: 0.2;
