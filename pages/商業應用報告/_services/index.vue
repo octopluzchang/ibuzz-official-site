@@ -55,7 +55,7 @@
 <script>
 export default {
   created: function () {
-    this.$store.commit('updateProductIndex', '商業報告分析')
+    this.$store.commit('updateProductIndex', '商業應用報告')
     this.$store.commit('updateServiceIndex', this.$route.params.services)
   }
 }

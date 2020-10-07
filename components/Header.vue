@@ -3,14 +3,15 @@
     <div class="header">
       <div class="row align-items-center">
         <div class="col-auto">
-          <h4 class="mr-0">i-Buzz</h4>
+<h4 class="mr-0">
+          <nuxt-link to="/">i-Buzz</nuxt-link></h4>
         </div>
         <div class="headerNavContainer desktopOnly">
-          <nuxt-link :to="'/' + product.name" class="headerNavItem" v-for="(product, productIndex) in $store.state.products" :class="{disabled: !product.services.length}">{{product.name}}</nuxt-link>
+          <nuxt-link :to="'/' + product.name" class="headerNavItem" v-for="(product, productIndex) in $store.state.products" v-if="product.services.length">{{product.name}}</nuxt-link>
         </div>
       </div>
     </div>
-    <div class="navBar">
+    <div class="navBar" v-if="$store.state.selectedProduct != 0">
       <div class="wrapper desktopOnly">
         <div class="row align-items-center">
           <div class="col-auto">
@@ -35,8 +36,6 @@
               </div>
               <a href="javascript:;" class="button main" @click="$store.commit('toggleForm')">聯絡我們</a>
             </div>
-
-
           </div>
         </div>
       </div>

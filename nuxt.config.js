@@ -28,6 +28,18 @@ export default {
       {
         src: "https://code.jquery.com/jquery-3.3.1.min.js",
         type: "text/javascript"
+      },
+      {
+        src: "/js/wheelnav.js",
+        type: "text/javascript"
+      },
+      {
+        src: "/js/raphael.min.js",
+        type: "text/javascript"
+      },
+      {
+        src: "/js/raphael.icons.min.js",
+        type: "text/javascript"
       }
     ]
   },
@@ -43,7 +55,8 @@ export default {
     { src: '~/plugins/vue-sticky-directive.js', ssr: false },
     { src: '~/plugins/vue-smooth-scroll.js' },
     { src: '~/plugins/vue-scrollto.js' },
-    { src: './plugins/vue-slick.js' }
+    { src: './plugins/vue-slick.js' },
+    { src: '~/plugins/vue-chartjs.js', ssr: false}
   ],
   /*
   ** Auto import components
