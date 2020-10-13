@@ -25,7 +25,7 @@
           </div>
         </div>
         <div id="main">
-         <div class="section" v-if="$store.state.products[$store.state.selectedProduct].services[$store.state.selectedService].features[$store.state.selectedFeature].reports.length">
+         <div class="section" v-if="$store.state.products[$store.state.selectedProduct].services[$store.state.selectedService].features[$store.state.selectedFeature].reports">
            <div class="wrapper">
              <h2>i-Buzz {{this.$route.params.features}}應用介紹</h2>
            </div>
@@ -88,7 +88,7 @@
             </div>
           </div>
 
-          <div class="section dark" v-if="$store.state.products[$store.state.selectedProduct].services[$store.state.selectedService].features[$store.state.selectedFeature].faqs.length">
+          <div class="section dark" v-if="$store.state.products[$store.state.selectedProduct].services[$store.state.selectedService].features[$store.state.selectedFeature].faqs">
             <div class="wrapper">
               <h2>常見問題集</h2>
               <div class="faqContainer mr-2" v-for="faq in $store.state.products[$store.state.selectedProduct].services[$store.state.selectedService].features[$store.state.selectedFeature].faqs">

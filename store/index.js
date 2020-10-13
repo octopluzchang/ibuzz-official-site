@@ -3633,14 +3633,6 @@ export const state = () => ({
           ]
         }
       ]
-    },
-    {
-      name: '報告案例',
-      services: []
-    },
-    {
-      name: '行銷課程',
-      services: []
     }
 
         ]

@@ -25,7 +25,7 @@
           </div>
         </div>
         <div id="main">
-          <div class="section" v-if="$store.state.products[$store.state.selectedProduct].services[$store.state.selectedService].features[$store.state.selectedFeature].reports.length">
+          <div class="section" v-if="$store.state.products[$store.state.selectedProduct].services[$store.state.selectedService].features[$store.state.selectedFeature].reports">
             <div class="wrapper">
               <h2>i-Buzz {{this.$route.params.features}}報告介紹</h2>
             </div>

@@ -8,9 +8,9 @@
         </h4>
         </div>
         <div class="headerNavContainer desktopOnly col">
-          <nuxt-link :to="'/' + product.name" class="headerNavItem" v-for="(product, productIndex) in $store.state.products" v-if="product.services.length">{{product.name}}</nuxt-link>
+          <nuxt-link :to="'/' + product.name" class="headerNavItem" v-for="(product, productIndex) in $store.state.products" v-show="product.services.length">{{product.name}}</nuxt-link>
         </div>
-        <a href="javascript:;" class="button main align-self-right" @click="$store.commit('toggleForm')">聯絡我們</a>
+
       </div>
     </div>
     <div class="navBar">
@@ -38,6 +38,7 @@
               </div>
             </div>
           </div>
+          <a href="javascript:;" class="button main align-self-right" @click="$store.commit('toggleForm')">聯絡我們</a>
         </div>
       </div>
       <div class="wrapper mobileOnly" v-sticky>
