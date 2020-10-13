@@ -46,6 +46,39 @@
                 </div>
               </div>
             </div>
+            <div class="section light" id="pageNavBar">
+      <div class="wrapper">
+        <div class="row">
+          <div class="col">
+            <div class="row justify-content-end" v-if="$store.state.selectedService != 0">
+              <div class="col-sm-auto col">
+                <div class="icon ic_prev"></div>
+              </div>
+              <div class="col-sm-auto col">
+                <div class="text-right">
+                  <div class="small">上一個主題</div>
+                  <nuxt-link :to="'/' + $store.state.products[$store.state.selectedProduct].name + '/' + $store.state.products[$store.state.selectedProduct].services[$store.state.selectedService-1].title" @click.native="$store.commit('getServiceIndex', $store.state.selectedService-1)">{{$store.state.products[$store.state.selectedProduct].services[$store.state.selectedService-1].title}}</nuxt-link>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="divider"></div>
+          <div class="col">
+            <div class="row justify-content-start" v-if="$store.state.selectedService != $store.state.products[$store.state.selectedProduct].services.length-1">
+              <div class="col-sm-auto col">
+                <div class="text-left">
+                  <div class="small">下一個主題</div>
+                  <nuxt-link :to="'/' + $store.state.products[$store.state.selectedProduct].name + '/' + $store.state.products[$store.state.selectedProduct].services[$store.state.selectedService+1].title" @click.native="$store.commit('getServiceIndex', $store.state.selectedService+1)">{{$store.state.products[$store.state.selectedProduct].services[$store.state.selectedService+1].title}}</nuxt-link>
+                </div>
+              </div>
+              <div class="col-sm-auto col">
+                <div class="icon ic_next"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
         </div>
       </div>
     </div>
