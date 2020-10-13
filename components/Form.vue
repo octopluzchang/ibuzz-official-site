@@ -52,7 +52,7 @@
         <h3>所需服務</h3>
         <div class="section">
           <select v-model="selectedProduct">
-           <option :value="productIndex" v-for="(product, productIndex) in $store.state.products" v-if="productIndex<2">
+           <option :value="productIndex" v-for="(product, productIndex) in $store.state.products" v-if="productIndex<3&&productIndex>0">
              {{product.name}}
            </option>
          </select>
