@@ -105,7 +105,7 @@
               <div class="col-lg-3 col-md-4 mr-3" v-for="(service, serviceIndex) in $store.state.products[1].services">
                 <h5>{{service.title}}</h5>
                 <div v-for="(feature,featureIndex) in service.features">
-                  <nuxt-link :to="'/' + $store.state.products[$store.state.selectedProduct].name +'/' + service.title + '/' + feature.title">
+                  <nuxt-link :to="'/' + $store.state.products[1].name +'/' + service.title + '/' + feature.title">
                       {{feature.title}}
                     </nuxt-link>
                 </div>
@@ -117,7 +117,7 @@
               <div class="col-lg-3 col-md-4 mr-3" v-for="(service, serviceIndex) in $store.state.products[2].services">
                 <h5>{{service.title}}</h5>
                 <div v-for="(feature,featureIndex) in service.features">
-                  <nuxt-link :to="'/' + $store.state.products[$store.state.selectedProduct].name +'/' + service.title + '/' + feature.title">
+                  <nuxt-link :to="'/' + $store.state.products[2].name +'/' + service.title + '/' + feature.title">
                       {{feature.title}}
                     </nuxt-link>
                 </div>
