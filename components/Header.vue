@@ -13,7 +13,7 @@
         <a href="javascript:;" class="button main align-self-right" @click="$store.commit('toggleForm')">聯絡我們</a>
       </div>
     </div>
-    <div class="navBar" v-if="$store.state.selectedProduct != 0">
+    <div class="navBar">
       <div class="wrapper desktopOnly">
         <div class="row align-items-center">
           <div class="col-auto">
