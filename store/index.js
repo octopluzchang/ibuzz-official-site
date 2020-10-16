@@ -27,6 +27,33 @@ export const state = () => ({
         ['美妝', '護膚保養', '彩妝', '隱形眼鏡'],
         ['嬰兒外出用品', '嬰兒推車', '汽車安全座椅', '嬰兒背巾', '嬰幼兒尿布', '嬰幼兒奶粉', '嬰幼兒益生菌', '副食品', '消毒鍋', '擠乳器'],
         ['寵物食品', '寵物保健食品']
+      ],
+      articles: [
+        {
+          cover: '/assets/articles/img_1.png',
+          title: '分析人注意！別再用關鍵字監測工具分析品牌聲量了！',
+          url: 'https://www.i-buzz.com.tw/brandranking/article_page/?id=Nzc='
+        },
+        {
+          cover: '/assets/articles/img_2.png',
+          title: '超過80%的使用者表示：「關鍵字語法設定」是口碑數據分析最大的門檻',
+          url: 'https://www.i-buzz.com.tw/brandranking/article_page/?id=ODI='
+        },
+        {
+          cover: '/assets/articles/img_3.png',
+          title: '雜亂的關鍵字雲分析，能看出什麼消費者Insight？',
+          url: 'https://www.i-buzz.com.tw/brandranking/article_page/?id=NzY='
+        },
+        {
+          cover: '/assets/articles/img_4.png',
+          title: '系統自動化圖表這麼多，使用者該如何選用？',
+          url: 'https://www.i-buzz.com.tw/brandranking/article_page/?id=NzM='
+        },
+        {
+          cover: '/assets/articles/img_5.png',
+          title: 'i-Buzz VOC+產業口碑數據 五大優勢不藏私大公開',
+          url: 'https://www.i-buzz.com.tw/brandranking/article_page/?id=ODU='
+        }
       ]
     },
     {

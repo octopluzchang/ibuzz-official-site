@@ -132,7 +132,21 @@
         </div>
       </div>
     </div>
-
+    <div class="section" id="">
+      <div class="wrapper">
+        <h2>i-Buzz 最新文章</h2>
+        <h4>知識型文章</h4>
+        <VueSlickCarousel :arrows="true" :dots="true" :slidesToShow="3">
+            <div v-for="(article, articleIndex) in $store.state.products[0].articles" class="pd-1">
+              <div class="pd-1">
+                <a :href="article.url" target="_blank"><img :src="article.cover" class="mr-1"></a>
+                <h6><b><a :href="article.url" target="_blank">{{article.title}}</a></b></h6>
+                <a :href="article.url" target="_blank" class="mr-1">閱讀更多</a>
+              </div>
+            </div>
+        </VueSlickCarousel>
+      </div>
+    </div>
   </div>
 </template>
 <script>
