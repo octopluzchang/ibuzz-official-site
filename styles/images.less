@@ -18,6 +18,11 @@
   background-size: 40px 40px;
   display: inline-block;
   vertical-align: middle;
+  &.large {
+    width: 100px;
+    height: 100px;
+    background-size: 100px 100px;
+  }
 
   &.small {
     width: 20px;
@@ -27,11 +32,12 @@
 
   &.clickable {
     cursor: pointer;
-  }
-
-  &:hover {
+    &:hover {
     background-color: @bg-grey;
   }
+  }
+
+
   &.ic_dropdown {
     background-image: url(/assets/ic_dropdown@2x.png);
   }

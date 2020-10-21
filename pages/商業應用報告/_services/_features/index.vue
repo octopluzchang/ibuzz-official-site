@@ -1,10 +1,10 @@
 <template>
   <div>
-    <div class="section" id="banner">
+    <div class="section dark" id="banner">
       <div class="wrapper">
         <Breadcrumbs />
         <div class="row">
-          <div class="col-lg-6">
+          <div class="col-lg-8">
             <h1 class="title">
               {{$store.state.products[$store.state.selectedProduct].services[$store.state.selectedService].features[$store.state.selectedFeature].tagline}}
             </h1>

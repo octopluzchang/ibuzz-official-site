@@ -1,15 +1,22 @@
 <template>
   <div>
-   <div class="section" id="banner">
+   <div class="section dark" id="banner">
       <div class="wrapper">
-        <div class="row">
-          <div class="col-lg-6">
+        <div class="row align-items-center">
+          <div class="col-lg-4">
             <h1 class="title">
               {{this.$route.params.services}}
             </h1>
             <p>
              {{$store.state.products[$store.state.selectedProduct].services[$store.state.selectedService].description}}
             </p>
+          </div>
+          <div class="col-lg-8">
+<!--
+           <img :src="'/assets/images/img_' + $store.state.selectedProduct + '-' +
+                  $store.state.selectedService + '-1'
+                    + '.png'">
+-->
           </div>
         </div>
       </div>
@@ -28,6 +35,10 @@
               <div class="wrapper">
                 <div class="row mr-2">
                   <div class="col-lg-6">
+                  <img :src="'/assets/icons/icon_' + $store.state.selectedProduct + '-' +
+                  $store.state.selectedService + '-' +
+                  featureIndex
+                    + '.png'" class="icon large">
                     <h3>{{feature.title}}</h3>
                     <p>
                       {{feature.description}}

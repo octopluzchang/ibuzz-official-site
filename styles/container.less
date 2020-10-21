@@ -10,7 +10,7 @@
   width: 100%;
 }
 .section {
-  padding: 2em;
+  padding: 1em;
   &.dark {
     background-color: @dark-grey;
     color: darken(white, 15%);
@@ -26,12 +26,8 @@
     }
   }
   &.highlighted {
-    background-color: desaturate(darken(@highlight, 10%), 80%);
-    color: darken(white, 15%);
-    text-shadow: @shadow;
-    h1, h2, h3, h4, h5, h6 {
-      color: white;
-    }
+    background: desaturate(lighten(@main, 30%), 30%);
+    color: inherit;
   }
 }
 

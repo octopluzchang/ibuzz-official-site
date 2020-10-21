@@ -1,6 +1,9 @@
 <template>
-  <div id="layout">
-    <div sticky-container>
+  <div id="layout" class="theme" :class="{
+     business: $store.state.selectedProduct == 1,
+     voc: $store.state.selectedProduct == 2,
+     }">
+    <div sticky-container >
       <Header/>
       <nuxt id="main"/>
     </div>
@@ -17,6 +20,9 @@
   import '~/styles/main.less'
 
   export default {
+    created: function () {
+      this.$store.commit('updateProductIndex', 'i-Buzz')
+    },
     components: {
       Header,
       Footer,

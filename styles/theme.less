@@ -1,0 +1,52 @@
+//Various
+@text: desaturate(darken(@main, 25%), 30%);
+@highlight: spin(@main, 90);
+@dark: desaturate(darken(@main, 30%), 30%);
+a {
+  color: @main;
+
+  &.button {
+    &.main {
+      background-color: @main;
+    }
+  }
+}
+
+.navBar {
+  .navItem > a{
+    color: white;
+  }
+  .navItem > .nuxt-link-active {
+    border-bottom-color: white;
+  }
+  .top-sticky {
+    background-color: @dark;
+  }
+}
+
+#banner {
+  background-size: 100% 800px;
+  background-repeat: no-repeat;
+  background-blend-mode: overlay;
+}
+
+.section {
+  &.dark {
+    background: @dark;
+  }
+  &.highlighted {
+    background: #ffeb00;
+//    background: desaturate(lighten(@main, 30%), 30%);
+  }
+
+}
+
+.highlighted {
+  color: @main;
+}
+
+
+.tag {
+  border-color: @main;
+  color: @main;
+}

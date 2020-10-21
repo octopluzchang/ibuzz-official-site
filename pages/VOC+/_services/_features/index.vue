@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="section" id="banner">
+    <div class="section dark" id="banner">
       <div class="wrapper">
        <Breadcrumbs/>
         <div class="row">
