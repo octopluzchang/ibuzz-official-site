@@ -58,6 +58,7 @@ export default {
     { src: './plugins/vue-slick.js' },
     { src: '~/plugins/vue-chartjs.js', ssr: false}
   ],
+  loading: '~/components/loading.vue',
   /*
   ** Auto import components
   ** See https://nuxtjs.org/api/configuration-components
