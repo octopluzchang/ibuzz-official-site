@@ -63,6 +63,11 @@
             <p>為何需要三層級資料庫？<br><br>分析一個品牌在產業中的表現，不僅是品牌的聲量觀察，而是要以品牌為核心，將品牌關鍵字下探至系列甚至是單一產品服務，才能綜觀品牌在產業中的表現，因此i-Buzz VOC+研發了三層級產業分析資料庫，分類管理產業中「品牌、系列與產品」各類關鍵字，讓使用者更方便進行產業調查。</p>
           </div>
           <div class="col-lg-8">
+            <div id="img_2-home-4">
+              <video autoplay loop>
+               <source src="/assets/videos/img_2-home-4.mp4" type="video/mp4" >
+              </video>
+            </div>
             <img src="/assets/images/img_2-home-4.png">
           </div>
         </div>
@@ -86,7 +91,11 @@
         </div>
         <div class="row mr-2 align-items-center">
          <div class="col-lg-8">
-           <img src="/assets/images/img_2-home-7.png">
+
+           <VueSlickCarousel :arrows="true" :dots="true" :slidesToShow="1">
+            <img src="/assets/images/img_2-home-7-1.png">
+            <img src="/assets/images/img_2-home-7-2.png">
+        </VueSlickCarousel>
          </div>
           <div class="col">
             <h3>商業策略分析模組 </h3>
