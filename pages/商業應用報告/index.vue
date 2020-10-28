@@ -10,7 +10,7 @@
             <h4>
               深入淺出的專業分析提供最精確的數據、最有價值的發現與建議
             </h4>
-            <a href="javascript:;" class="button main large" @click="$store.commit('toggleForm')">申請註冊</a>
+            <a href="javascript:;" class="button main large" @click="$store.commit('toggleForm')">聯繫我們</a>
           </div>
           <div class="col-lg-8">
             <img src="/assets/images/img_0-home-6.png">
@@ -118,9 +118,11 @@
     </div>
     <div class="section">
       <div class="wrapper">
-        <h2>七大分析帶您洞悉產業與消費者！</h2>
+        <h2>六大分析帶您洞悉產業與消費者！</h2>
         <div class="row">
-          <div class="col-lg-4" v-for="(service, serviceIndex) in $store.state.products[0].services">
+          <div class="col-lg-4" v-for="(service, serviceIndex) in $store.state.products[1].services">
+           <img :src="'/assets/icons/icon_' + $store.state.selectedProduct + '-' +
+                  serviceIndex + '.png'" class="icon large">
             <h4>i-Buzz{{service.title}}</h4>
             <p>{{service.description}}</p>
           </div>

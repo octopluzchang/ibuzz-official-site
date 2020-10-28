@@ -9,6 +9,18 @@
         </div>
         <div class="headerNavContainer desktopOnly col">
           <nuxt-link :to="'/' + product.name" class="headerNavItem" v-for="(product, productIndex) in $store.state.products" v-show="product.services.length">{{product.name}}</nuxt-link>
+          <a href="javascript:;" class="headerNavItem disabled">
+            文章案例
+          </a>
+          <a href="https://www.accupass.com/organizer/detail/1807030736261448080453" class="headerNavItem">
+            活動與課程
+          </a>
+          <a href="http://haveachat.ibuzz.com.tw/" class="headerNavItem">
+            i-Buzz診聊事
+          </a>
+          <a href="javascript:;" class="headerNavItem" @click="$store.commit('toggleForm')">
+            聯絡我們
+          </a>
         </div>
 
       </div>

@@ -67,7 +67,7 @@
             </div>
           </div>
         </div>
-        <div v-for="(feature, featureIndex) in $store.state.products[1].services[2].features" v-if="selectedProduct==2">
+        <div v-for="(feature, featureIndex) in $store.state.products[2].services[1].features" v-if="selectedProduct==2">
           <div class="section" v-if="featureIndex<2">
             <h4>{{feature.title}}</h4>
             <div class="section light">

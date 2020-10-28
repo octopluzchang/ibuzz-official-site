@@ -15,7 +15,7 @@
             <h4>
               產業調查、競品分析、消費者研究，現在您有更好的選擇
             </h4>
-            <a href="javascript:;" class="button main large" @click="$store.commit('toggleForm')">申請註冊</a>
+            <a href="javascript:;" class="button main large" @click="$store.commit('toggleForm')">聯繫我們</a>
           </div>
         </div>
       </div>
