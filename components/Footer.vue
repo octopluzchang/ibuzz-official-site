@@ -5,7 +5,7 @@
         <div class="row align-items-center">
           <div class="col-lg-6">
             <h2>想知道i-Buzz更多實際應用？</h2>
-            <a href="javascript:;" class="button main">實際案例分享</a>
+            <a href="https://www.i-buzz.com.tw/brandranking/?tag=%E8%A1%8C%E9%8A%B7%E7%9F%A5%E8%AD%98" class="button main" target="_blank">實際案例分享</a>
           </div>
           <div class="col-lg-6">
             <img src="/assets/images/img_footer-1.png">
