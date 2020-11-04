@@ -93,7 +93,6 @@
         <h3>需求詳細說明</h3>
         <p>可自由輸入文字</p>
         <div class="section">
-         <span v-for="item in checked_product">{{item}}</span>
           <textarea class="w-100" placeholder="請輸入需求詳細說明" v-model="detail_content"></textarea>
         </div>
         <div class="row">

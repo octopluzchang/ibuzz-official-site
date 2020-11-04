@@ -18,9 +18,6 @@
           <a href="http://haveachat.i-buzz.com.tw/" class="headerNavItem" target="_blank">
             i-Buzz診聊事
           </a>
-          <a href="javascript:;" class="headerNavItem" @click="$store.commit('toggleForm')">
-            聯絡我們
-          </a>
         </div>
 
       </div>

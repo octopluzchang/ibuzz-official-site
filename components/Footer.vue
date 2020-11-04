@@ -85,12 +85,12 @@
               </a>
             </div>
             <div>
-              <a href="https://www.accupass.com/organizer/detail/1807030736261448080453" class="headerNavItem">
+              <a href="https://www.accupass.com/organizer/detail/1807030736261448080453" class="headerNavItem" target="_blank">
                 活動與課程
               </a>
             </div>
             <div>
-              <a href="http://haveachat.ibuzz.com.tw/" class="headerNavItem">
+              <a href="http://haveachat.i-buzz.com.tw/" class="headerNavItem" target="_blank">
                 i-Buzz診聊事
               </a>
             </div>
