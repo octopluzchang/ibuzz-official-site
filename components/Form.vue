@@ -130,13 +130,15 @@
     },
     methods: {
       sendForm: function() {
-        this.$axios.$post('/mail/send', {
-          from: this.contact_name,
+        this.$mail.send({
+          from: this.contact_name + '<' + this.contact_email + '>',
           subject: this.company_name + '聯絡需求',
-          text: '需求產品：' + this.checked_product + '需求詳細說明：' + this.detail_content,
-          to: 'octopusidea@gmail.com',
-        })
+          text: '需求產品：' + this.checked_product + '，需求詳細說明：' + this.detail_content,
+          to: 'contact@i-buzz.com.tw'
 
+        })
+        this.$store.commit('toggleForm')
+        $('.toastContainer').addClass('show')
       }
     }
   }

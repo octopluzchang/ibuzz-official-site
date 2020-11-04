@@ -101,6 +101,30 @@
 }
 
 
+//Toast
+.toastContainer {
+  position: fixed;
+  right: 0px;
+  bottom: -100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  z-index: 10;
+  padding: 20px 0;
+  &.show {
+    animation-name: toast;
+    animation-duration: 8s;
+  }
+}
+
+@keyframes toast {
+  0%   {bottom: -100%;}
+  20%  {bottom: 0px;}
+  50%  {bottom: 0px;}
+  80%  {bottom: 0px;}
+  100% {bottom: -100%;}
+}
+
 //Slick
 .slick-slider {
   margin: 20px 0;

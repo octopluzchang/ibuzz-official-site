@@ -7,6 +7,7 @@
       <Header/>
       <nuxt id="main"/>
     </div>
+    <Toast/>
     <Footer/>
     <Form id="contactForm" v-if="$store.state.showForm"/>
   </div>
@@ -16,6 +17,7 @@
   import Header from '~/components/Header.vue'
   import Footer from '~/components/Footer.vue'
   import Form from '~/components/Form.vue'
+  import Toast from '~/components/Toast.vue'
   import Breadcrumbs from '~/components/Breadcrumbs.vue'
   import '~/styles/main.less'
 
