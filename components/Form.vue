@@ -134,7 +134,7 @@
           from: this.contact_name + '<' + this.contact_email + '>',
           subject: this.company_name + '聯絡需求',
           text: '需求產品：' + this.checked_product + '，需求詳細說明：' + this.detail_content,
-          to: 'contact@i-buzz.com.tw'
+          to: ['octopusidea@gmail.com', 'Contact@i-buzz.com.tw']
 
         })
         this.$store.commit('toggleForm')

@@ -113,6 +113,9 @@ export default {
     }
     ]
   ],
+  axios: {
+      baseURL: '/'
+    },
   mail: {
     smtp: {
       host: "www3.hibox.hinet.net",
