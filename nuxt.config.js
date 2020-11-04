@@ -75,7 +75,21 @@ export default {
   modules: [
     // Doc: https://bootstrap-vue.js.org
     'bootstrap-vue/nuxt',
+    '@nuxtjs/axios',
+    ['nuxt-mail', {
+      smtp: {
+        host: "ibuzz-official-site.netlify.app",
+        port: 587,
+      },
+    }
+    ]
   ],
+  mail: {
+    smtp: {
+      host: "ibuzz-official-site.netlify.app",
+      port: 587,
+    },
+  },
   /*
   ** Build configuration
   ** See https://nuxtjs.org/api/configuration-build/
