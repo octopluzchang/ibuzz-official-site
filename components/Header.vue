@@ -4,7 +4,9 @@
       <div class="row align-items-center">
         <div class="col-auto">
           <h4 class="mr-0">
-            <nuxt-link to="/" id="logo">i-Buzz</nuxt-link>
+            <nuxt-link to="/" id="logo">
+              <img :src="'/assets/logo.png'">
+            </nuxt-link>
           </h4>
         </div>
         <div class="headerNavContainer desktopOnly col">
@@ -19,12 +21,17 @@
             i-Buzz診聊事
           </a>
         </div>
+        <div class="col-auto text-right">
+          <a href="https://www.i-buzz.com.tw/" class="headerNavItem" target="_blank">
+            回到i-Buzz官網
+          </a>
+        </div>
 
       </div>
     </div>
     <div class="navBar">
       <div class="wrapper desktopOnly">
-        <div class="row align-items-center">
+        <div class="row align-items-center" v-show="$store.state.selectedProduct != 0">
           <div class="col-2 pd-0">
             <nuxt-link :to="'/' + $store.state.products[$store.state.selectedProduct].name">
               <img :src="'/assets/logo_' + $store.state.selectedProduct + '.png'">
@@ -70,7 +77,7 @@
                   <div class="row align-items-center">
                     <div class="col">
                      <nuxt-link to="/">
-                      <img src="/assets/logo_0.png" @click="showMenu = false">
+                      <img src="/assets/logo.png" @click="showMenu = false">
                       </nuxt-link>
                     </div>
                     <div class="col text-right">

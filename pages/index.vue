@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="section light" id="banner">
+    <div class="section light pt-3" id="banner">
       <div class="wrapper">
         <div class="row align-items-center">
           <div class="col-lg-4">
