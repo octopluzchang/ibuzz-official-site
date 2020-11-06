@@ -40,7 +40,7 @@
             <div class="section light">
               <div class="wrapper">
                 <h2>您的工作是否常常有這些問題與需求？</h2>
-                <div class="faqContainer mr-2" v-for="problem in report.problems">
+                <div class="faqContainer mb-3" v-for="problem in report.problems">
                   <div class="row">
                     <div class="col-lg-6">
                       <h3><b>{{problem.title}}</b></h3>

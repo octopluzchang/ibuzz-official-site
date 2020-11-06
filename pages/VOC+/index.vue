@@ -12,7 +12,7 @@
               i-Buzz VOC+<br>
               產業口碑數據庫
             </h1>
-            <h4>
+            <h4 class="mb-5">
               產業調查、競品分析、消費者研究，現在您有更好的選擇
             </h4>
             <a href="javascript:;" class="button main large" @click="$store.commit('toggleForm')">聯繫我們</a>
@@ -83,7 +83,7 @@
         <div class="row mr-2 align-items-center">
           <div class="col">
             <h3>業界唯一專家語詞庫 </h3>
-            <p>為何需要專家語詞庫？<br><br>左邊是市面上常見自動斷詞的文字雲分析，僅能知道消費者最熱門的關鍵字的討論狀況，但需要更深入分析消費者Insight時，則無法針對特定主題找出分析重點。右邊是i-Buzz VOC+針對汽車產業建置的語意分析詞庫，依照消費者討論面向與行銷理論4P1S建置專家語詞庫，針對不同產業制定符合消費者討論現況之語意分析詞庫，藉以萃取出最精確消費者insight分析數據！</p>
+            <p>為何需要專家語詞庫？<br><br>市面上常見自動斷詞的文字雲分析，僅能知道消費者最熱門的關鍵字的討論狀況，但需要更深入分析消費者Insight時，則無法針對特定主題找出分析重點。i-Buzz VOC+產業語意分析，依照消費者討論面向與行銷理論4P1S，為不同產業制定符合消費者狀況之語意分析詞庫，萃取出最精確的消費者洞察數據！</p>
           </div>
           <div class="col-lg-8">
             <img src="/assets/images/img_2-home-6.png">

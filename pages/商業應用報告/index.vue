@@ -7,7 +7,7 @@
             <h1 class="title">
               i-Buzz 商業應用報告
             </h1>
-            <h4>
+            <h4 class="mb-5">
               深入淺出的專業分析提供最精確的數據、最有價值的發現與建議
             </h4>
             <a href="javascript:;" class="button main large" @click="$store.commit('toggleForm')">聯繫我們</a>
@@ -22,7 +22,7 @@
       <div class="wrapper">
         <div class="row">
           <div class="col-lg-6">
-            <p>
+            <p class="mb-0">
               i-Buzz商業應用報告(Business Applications Report)以縱橫大數據分析十餘載為基礎，將客戶各種商業行銷需求與疑難雜症劃分為六大分析面向，並彙整出針對不同問題與需求之分析應用報告，藉以對症下藥、用科學數據一一擊破客戶面臨之困境。
             </p>
           </div>

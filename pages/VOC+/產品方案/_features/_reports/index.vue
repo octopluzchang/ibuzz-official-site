@@ -40,17 +40,34 @@
 
           <div class="section light" v-if="$store.state.products[$store.state.selectedProduct].services[$store.state.selectedService].features[$store.state.selectedFeature].reports[$store.state.selectedReport].problems">
             <div class="wrapper">
-              <h2>您的工作是否常常有這些問題與需求？</h2>
-              <div class="faqContainer mr-2" v-for="problem in $store.state.products[$store.state.selectedProduct].services[$store.state.selectedService].features[$store.state.selectedFeature].reports[$store.state.selectedReport].problems">
+              <h2 class="mb-5">您的工作是否常常有這些問題與需求？</h2>
+              <div class="faqContainer mb-5" v-for="(problem, problemIndex) in $store.state.products[$store.state.selectedProduct].services[$store.state.selectedService].features[$store.state.selectedFeature].reports[$store.state.selectedReport].problems">
+
                 <div class="row">
                   <div class="col-lg-6">
-                    <h3><b>{{problem.title}}</b></h3>
-                    <p>{{problem.description}}</p>
+                  <div class="row">
+                    <div class="col-auto text-center">
+                     <div>需求</div>
+                      <h3>{{problemIndex+1}}</h3>
+                    </div>
+                     <div class="col">
+                        <h3><b>{{problem.title}}</b></h3>
+                        <p>{{problem.description}}</p>
+                     </div>
+                  </div>
                   </div>
                   <div class="col-lg-6">
-                    <h5 v-for="item in problem.a">{{item}}</h5>
+                    <div class="row">
+                     <div class="col-auto">
+                           <div class="icon ic_next"></div>
+                         </div>
+                      <div class="col">
+                        <h5 v-for="item in problem.a">{{item}}</h5>
+                      </div>
+                    </div>
                   </div>
                 </div>
+                <hr v-show="problemIndex != $store.state.products[$store.state.selectedProduct].services[$store.state.selectedService].features[$store.state.selectedFeature].reports[$store.state.selectedReport].problems.length-1">
               </div>
             </div>
           </div>
