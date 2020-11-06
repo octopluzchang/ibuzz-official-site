@@ -11,7 +11,7 @@
         </div>
         <div class="headerNavContainer desktopOnly col">
           <nuxt-link :to="'/' + product.name" class="headerNavItem" v-for="(product, productIndex) in $store.state.products" v-show="product.services.length">{{product.name}}</nuxt-link>
-          <a href="javascript:;" class="headerNavItem disabled">
+          <a href="https://www.i-buzz.com.tw/brandranking?tag=%E8%A1%8C%E9%8A%B7%E7%9F%A5%E8%AD%98" class="headerNavItem" target="_blank">
             文章案例
           </a>
           <a href="https://www.accupass.com/organizer/detail/1807030736261448080453" class="headerNavItem" target="_blank">

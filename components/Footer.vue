@@ -80,7 +80,7 @@
             </div>
             <h3>其他服務</h3>
             <div>
-              <a href="javascript:;" class="headerNavItem disabled">
+              <a href="https://www.i-buzz.com.tw/brandranking?tag=%E8%A1%8C%E9%8A%B7%E7%9F%A5%E8%AD%98" class="headerNavItem" target="_blank">
                 文章案例
               </a>
             </div>
