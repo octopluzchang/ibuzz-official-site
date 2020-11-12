@@ -113,21 +113,6 @@ export default {
     }
     ]
   ],
-  axios: {
-    proxy: true,
-    https: true
-    },
-  mail: {
-    smtp: {
-      host: "www3.hibox.hinet.net",
-      port: 587,
-      secure: false,
-      auth: {
-            user: "Contact@i-buzz.com.tw",
-            pass: "bb0226"
-          }
-    },
-  },
   /*
    ** Build configuration
    ** See https://nuxtjs.org/api/configuration-build/
