@@ -114,7 +114,8 @@ export default {
     ]
   ],
   axios: {
-      baseURL: '/'
+    proxy: true,
+    https: true
     },
   mail: {
     smtp: {
