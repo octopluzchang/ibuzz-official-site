@@ -3672,7 +3672,6 @@ export const mutations = {
   toggleForm(state) {
     state.showForm = !state.showForm
     $('body').toggleClass('freeze')
-//    window.open("https://forms.gle/TxYpZAxGhYnCqws66");
   },
   getProductIndex(state, id) {
     state.selectedProduct = id

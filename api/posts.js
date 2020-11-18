@@ -53,7 +53,7 @@ export async function getTags(tagSlug) {
 export async function getPostsArchive(tagSlug) {
     return await api.posts
         .browse({
-            limit: 'all',
+            limit: 2,
             include: 'tags',
             filter: 'tag:' + tagSlug,
         })

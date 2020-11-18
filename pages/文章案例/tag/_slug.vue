@@ -36,10 +36,10 @@
         <div class="row">
             <div class="pagination">
                 <div class="prev">
-                    <nuxt-link :to="prevLink" title="Newer posts">Newer posts</nuxt-link>
+                    <nuxt-link :to="prevLink">Newer posts</nuxt-link>
                 </div>
                 <div class="next">
-                    <nuxt-link :to="nextLink" title="Older posts">Older posts</nuxt-link>
+                    <nuxt-link :to="nextLink">Older posts</nuxt-link>
                 </div>
             </div>
         </div>
@@ -57,16 +57,17 @@ export default {
   async asyncData ({ params }) {
       const tag = await getTags(params.slug);
       const raw = await getPostsArchive(params.slug);
-      const posts = await getPostsPage( raw.meta.pagination.page);
+      const posts = await getPostsPage( raw.meta.pagination.page );
+      let nextPage = 1
+      
       console.log(raw.meta.pagination)
-      return { tag: tag, posts: posts}
+      return { tag: tag, raw:raw, posts: posts}
     },
-    
+
   computed: {
         prevLink() {
             return this.baseUrl + 'page/' + 1
         },
-
         nextLink() {
             return this.baseUrl + 'page/' + 2
         }
