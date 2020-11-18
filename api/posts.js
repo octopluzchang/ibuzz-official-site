@@ -73,14 +73,3 @@ export async function getPostsPage(pagination) {
             console.error(err);
         });
 }
-
-//export async function getPostsIndex({commit}, pagination) {
-//    return await api.posts
-//        .browse({
-//            limit: postsPerPage,
-//            page: pagination.pageNumber,
-//            include: 'tags,authors',
-//            filter: pagination.filter,
-//            order: 'featured DESC, published_at DESC'
-//        })
-//}
