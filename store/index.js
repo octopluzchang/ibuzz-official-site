@@ -3660,9 +3660,12 @@ export const state = () => ({
           ]
         }
       ]
+    },
+    {
+      name: '文章案例',
+      services: []
     }
-
-        ]
+    ]
 })
 
 export const mutations = {

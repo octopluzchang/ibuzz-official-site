@@ -10,10 +10,7 @@
           </h4>
         </div>
         <div class="headerNavContainer desktopOnly col">
-          <nuxt-link :to="'/' + product.name" class="headerNavItem" v-for="(product, productIndex) in $store.state.products" v-show="product.services.length">{{product.name}}</nuxt-link>
-          <a href="https://www.i-buzz.com.tw/brandranking?tag=%E8%A1%8C%E9%8A%B7%E7%9F%A5%E8%AD%98" class="headerNavItem" target="_blank">
-            文章案例
-          </a>
+          <nuxt-link :to="'/' + product.name" class="headerNavItem" v-for="(product, productIndex) in $store.state.products" v-show="productIndex !=0">{{product.name}}</nuxt-link>
           <a href="https://www.accupass.com/organizer/detail/1807030736261448080453" class="headerNavItem" target="_blank">
             活動與課程
           </a>
@@ -31,7 +28,7 @@
     </div>
     <div class="navBar">
       <div class="wrapper desktopOnly">
-        <div class="row align-items-center" v-show="$store.state.selectedProduct != 0">
+        <div class="row align-items-center" v-show="$store.state.selectedProduct != 0 && $store.state.selectedProduct != 3">
           <div class="col-2 pd-0">
             <nuxt-link :to="'/' + $store.state.products[$store.state.selectedProduct].name">
               <img :src="'/assets/logo_' + $store.state.selectedProduct + '.png'">

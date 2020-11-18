@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "@nuxtjs/axios": "^5.12.2",
+    "@tryghost/content-api": "^1.4.10",
     "bootstrap": "^4.5.0",
     "bootstrap-vue": "^2.15.0",
     "chart.js": "^2.9.3",

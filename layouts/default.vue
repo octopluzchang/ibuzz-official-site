@@ -2,6 +2,7 @@
   <div id="layout" class="theme" :class="{
      business: $store.state.selectedProduct == 1,
      voc: $store.state.selectedProduct == 2,
+     articles: $store.state.selectedProduct == 3,
      }">
     <div sticky-container >
       <Header/>
