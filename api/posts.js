@@ -3,20 +3,63 @@ import GhostContentAPI from '@tryghost/content-api'
 const api = new GhostContentAPI({
     url: 'http://localhost:2368',
     key: '7cec24c1ffce4b6f3b02d6cb9c',
-    version: "v2"
+    version: "v3"
 });
 
+//全部文章
 export async function getPosts() {
     return await api.posts
         .browse({
             limit: 4,
             include: 'tags'
+            
         })
         .catch(err => {
             console.error(err);
         });
 }
 
+//知識文章
+export async function getPostsKnowledge() {
+    return await api.posts
+        .browse({
+            limit: 4,
+            include: 'tags',
+            filter: 'tag: knowledge'
+            
+        })
+        .catch(err => {
+            console.error(err);
+        });
+}
+
+//情報文章
+export async function getPostsNews() {
+    return await api.posts
+        .browse({
+            limit: 4,
+            include: 'tags',
+            filter: 'tag: news'
+        })
+        .catch(err => {
+            console.error(err);
+        });
+}
+
+//最新發布
+export async function getPostsLatest() {
+    return await api.posts
+        .browse({
+            limit: 8,
+            include: 'tags',
+        })
+        .catch(err => {
+            console.error(err);
+        });
+}
+
+
+//相關文章
 export async function getRelatedPosts(single) {
     return await api.posts
         .browse({
@@ -53,7 +96,7 @@ export async function getTags(tagSlug) {
 export async function getPostsArchive(tagSlug) {
     return await api.posts
         .browse({
-            limit: 2,
+            limit: 'all',
             include: 'tags',
             filter: 'tag:' + tagSlug,
         })

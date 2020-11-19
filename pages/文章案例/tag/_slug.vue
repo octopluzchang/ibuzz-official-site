@@ -15,61 +15,67 @@
     <div class="section">
       <div class="wrapper">
         <div class="row">
-          <div class="col-4" v-for="post in posts">
-            <section class="blog-post" >
-             <nuxt-link :to="{ path: '/文章案例/' + post.slug }">
-                <img :src="post.feature_image">
-              </nuxt-link>
-              <nuxt-link :to="{ path: '/文章案例/' + post.slug }">
-                <p>{{ post.title }}</p>
-              </nuxt-link>
-              <span v-for="tag in post.tags">
-                <nuxt-link :to="{ path: '文章案例/tag/' + tag.slug }">{{ tag.name }}</nuxt-link>
-              </span>
-            </section>
-          </div>
+          <div class="col-sm-4 mb-3" v-for="post in posts">
+                <section>
+                 <a :href="'/文章案例/' + post.slug" class="postThumbnail">
+                    <img :src="post.feature_image">
+                  </a>
+                  <h6 class="mb-0 mt-2 mb-1">{{ post.title }}</h6>
+                  <span v-for="tag in post.tags" class="mr-1">
+                    <nuxt-link :to="{ path: '/文章案例/tag/' + tag.slug }"><span class="badge badge-pill badge-secondary">{{ tag.name }}</span></nuxt-link>
+                  </span>
+                </section>
+              </div>
         </div>
       </div>
     </div>
+<!--
     <div class="section">
       <div class="wrapper">
         <div class="row">
             <div class="pagination">
-                <div class="prev">
-                    <nuxt-link :to="prevLink">Newer posts</nuxt-link>
+                <div class="prev" @click="prevLink">
+                    Newer posts
                 </div>
-                <div class="next">
-                    <nuxt-link :to="nextLink">Older posts</nuxt-link>
+                <div class="next" @click="nextLink">
+                    Older posts
                 </div>
             </div>
         </div>
       </div>
     </div>
+-->
   </div>
 </template>
 <script>
-import { getTags, getPostsArchive, getPostsPage } from '@/api/posts';
+import { getTags, getPostsArchive } from '@/api/posts';
 
 export default {
   created: function () {
     this.$store.commit('updateProductIndex', '文章案例')
   },
-  async asyncData ({ params }) {
+  async asyncData ({ params, store }) {
       const tag = await getTags(params.slug);
-      const raw = await getPostsArchive(params.slug);
-      const posts = await getPostsPage( raw.meta.pagination.page );
-      let nextPage = 1
-      
-      console.log(raw.meta.pagination)
-      return { tag: tag, raw:raw, posts: posts}
+      const posts = await getPostsArchive(params.slug);
+      await store.dispatch('getPostsIndex', '1', params.slug);
+//      const posts = await store.state.postsIndex
+      console.log(store.state.postsIndex)
+      return { tag: tag,  posts: posts}
     },
-
-  computed: {
+    data() {
+        return {
+            posts: []
+        }
+    },
+  methods: {
         prevLink() {
-            return this.baseUrl + 'page/' + 1
+            this.$store.dispatch('getPostsIndex', '1')
         },
-        nextLink() {
-            return this.baseUrl + 'page/' + 2
+        async nextLink() {
+         this.$store.dispatch('getPostsIndex', '10')
+            const posts = await this.$store.state.postsIndex
+            console.log(this.$store.state.postsIndex.meta)
+            
         }
     }
 }

@@ -77,6 +77,9 @@ export default {
     {
       src: './plugins/vue-slick.js'
     },
+      {
+      src: './plugins/fb-sdk.js'
+    },
     {
       src: '~/plugins/vue-chartjs.js',
       ssr: false

@@ -3,7 +3,7 @@
     <div class="header desktopOnly">
       <div class="row align-items-center">
         <div class="col-auto">
-          <h4 class="mr-0">
+          <h4 class="m-0">
             <nuxt-link to="/" id="logo">
               <img :src="'/assets/logo.png'">
             </nuxt-link>
@@ -57,7 +57,7 @@
       <div class="wrapper mobileOnly" v-sticky>
         <div class="row align-items-center">
           <div class="col-5 pd-0">
-            <nuxt-link :to="'/' + $store.state.products[$store.state.selectedProduct].name">
+            <nuxt-link :to="'/' + $store.state.products[$store.state.selectedProduct].name" v-show="$store.state.selectedProduct != 0 && $store.state.selectedProduct != 3">
               <img :src="'/assets/logo_' + $store.state.selectedProduct + '.png'">
             </nuxt-link>
           </div>
