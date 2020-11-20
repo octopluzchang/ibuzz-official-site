@@ -2,7 +2,7 @@ import GhostContentAPI from '@tryghost/content-api'
 
 const api = new GhostContentAPI({
     url: 'http://localhost:2368',
-    key: '7cec24c1ffce4b6f3b02d6cb9c',
+    key: '545bbfc5a36507b95ac6e345de',
     version: "v3"
 });
 
@@ -12,7 +12,7 @@ export async function getPosts() {
         .browse({
             limit: 4,
             include: 'tags'
-            
+
         })
         .catch(err => {
             console.error(err);
@@ -26,7 +26,7 @@ export async function getPostsKnowledge() {
             limit: 4,
             include: 'tags',
             filter: 'tag: knowledge'
-            
+
         })
         .catch(err => {
             console.error(err);
