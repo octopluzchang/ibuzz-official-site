@@ -10,7 +10,7 @@
           </h4>
         </div>
         <div class="headerNavContainer desktopOnly col">
-          <nuxt-link :to="'/' + product.name" class="headerNavItem" v-for="(product, productIndex) in $store.state.products" v-show="productIndex !=0">{{product.name}}</nuxt-link>
+          <nuxt-link :to="'/' + product.name" class="headerNavItem" v-for="(product, productIndex) in $store.state.products" v-show="productIndex !=0">{{product.slug}}</nuxt-link>
           <a href="https://www.accupass.com/organizer/detail/1807030736261448080453" class="headerNavItem" target="_blank">
             活動與課程
           </a>
@@ -73,8 +73,8 @@
                 <div id="mobileNavMenu" class="text-left" v-show="showMenu">
                   <div class="row align-items-center">
                     <div class="col">
-                     <nuxt-link to="/">
-                      <img src="/assets/logo.png" @click="showMenu = false">
+                      <nuxt-link to="/">
+                        <img src="/assets/logo.png" @click="showMenu = false">
                       </nuxt-link>
                     </div>
                     <div class="col text-right">

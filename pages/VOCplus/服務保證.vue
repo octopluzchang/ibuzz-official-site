@@ -5,8 +5,7 @@
         <div class="row">
           <div class="col-lg-6">
             <h1 class="title">
-             i-Buzz VOC+<br>
-              適用族群
+              服務保證
             </h1>
             <p>
              {{$store.state.products[$store.state.selectedProduct].services[$store.state.selectedService].description}}
@@ -34,6 +33,13 @@
                 </div>
               </div>
             </div>
+            <div class="section">
+              <div class="wrapper">
+                <div class="row m-2">
+                  <h3>不定期行銷講座/工作坊</h3>
+                </div>
+              </div>
+            </div>
         </div>
   </div>
 </template>
@@ -41,8 +47,8 @@
 <script>
 export default {
   created: function () {
-    this.$store.commit('updateProductIndex', 'VOC+')
-    this.$store.commit('updateServiceIndex', '適用族群')
+    this.$store.commit('updateProductIndex', 'VOCplus')
+    this.$store.commit('updateServiceIndex', '服務保證')
   }
 }
 </script>

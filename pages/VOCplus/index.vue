@@ -148,7 +148,7 @@
 <script>
 export default {
   created: function () {
-    this.$store.commit('updateProductIndex', 'VOC+')
+    this.$store.commit('updateProductIndex', 'VOCplus')
   },
   data() {
       return {

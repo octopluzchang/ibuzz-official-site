@@ -125,7 +125,7 @@
 <script>
   export default {
     created: function() {
-      this.$store.commit('updateProductIndex', 'VOC+')
+      this.$store.commit('updateProductIndex', 'VOCplus')
       this.$store.commit('updateServiceIndex', '產品方案')
       this.$store.commit('updateFeatureIndex', this.$route.params.features)
       this.$store.commit('updateReportIndex', this.$route.params.reports)

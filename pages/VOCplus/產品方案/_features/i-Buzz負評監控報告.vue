@@ -95,7 +95,7 @@
 <script>
   export default {
     created: function() {
-      this.$store.commit('updateProductIndex', 'VOC+')
+      this.$store.commit('updateProductIndex', 'VOCplus')
       this.$store.commit('updateServiceIndex', '產品方案')
       this.$store.commit('updateFeatureIndex', '專案服務')
       this.$store.commit('updateReportIndex', 'i-Buzz負評監控報告')
