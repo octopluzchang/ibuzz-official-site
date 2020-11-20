@@ -22,7 +22,7 @@
                   </a>
                   <h6 class="mb-0 mt-2 mb-1">{{ post.title }}</h6>
                   <span v-for="tag in post.tags" class="mr-1">
-                    <nuxt-link :to="{ path: '/文章案例/tag/' + tag.slug }"><span class="badge badge-pill badge-secondary">{{ tag.name }}</span></nuxt-link>
+                    <nuxt-link :to="'/文章案例/tag/' + tag.slug"><span class="badge badge-pill badge-secondary">{{ tag.name }}</span></nuxt-link>
                   </span>
                 </section>
               </div>
@@ -58,7 +58,6 @@ export default {
       const tag = await getTags(params.slug);
       const posts = await getPostsArchive(params.slug);
       await store.dispatch('getPostsIndex', '1', params.slug);
-//      const posts = await store.state.postsIndex
       console.log(store.state.postsIndex)
       return { tag: tag,  posts: posts}
     },
@@ -75,7 +74,7 @@ export default {
          this.$store.dispatch('getPostsIndex', '10')
             const posts = await this.$store.state.postsIndex
             console.log(this.$store.state.postsIndex.meta)
-            
+
         }
     }
 }

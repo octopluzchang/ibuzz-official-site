@@ -27,7 +27,7 @@
                     <div class="col">
                         <h5>
                             <span v-for="tag in single.tags">
-                                <nuxt-link :to="{ path: '/文章案例/tag/' + tag.slug }"><span class="badge badge-pill badge-secondary mr-2">{{ tag.name }}</span></nuxt-link>
+                                <nuxt-link :to="'/文章案例/tag/' + tag.slug"><span class="badge badge-pill badge-secondary mr-2">{{ tag.name }}</span></nuxt-link>
                             </span>
                         </h5>
                     </div>
@@ -48,7 +48,7 @@
                             </a>
                             <h6 class="mb-0 mt-2 mb-1">{{ post.title }}</h6>
                             <span v-for="tag in post.tags" class="mr-1">
-                                <nuxt-link :to="{ path: '/文章案例/tag/' + tag.slug }"><span class="badge badge-pill badge-secondary">{{ tag.name }}</span></nuxt-link>
+                                <nuxt-link :to="'/文章案例/tag/' + tag.slug"><span class="badge badge-pill badge-secondary">{{ tag.name }}</span></nuxt-link>
                             </span>
                         </section>
                     </div>
