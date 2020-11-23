@@ -47,7 +47,7 @@
                                 <h3 class="mb-0">情報文章</h3>
                             </div>
                             <div class="col text-right">
-                                <a :href="'/文章案例/tag/news'">查看更多</a>
+                                <nuxt-link to="/文章案例/tag/news">查看更多</nuxt-link>
                             </div>
                         </div>
                         <div class="row">
@@ -58,7 +58,7 @@
                                     </a>
                                     <h6 class="mb-0 mt-2 mb-1">{{ post.title }}</h6>
                                     <span v-for="tag in post.tags" class="mr-1">
-                                        <a :href="'/文章案例/tag/' + tag.slug"><span class="badge badge-pill badge-secondary">{{ tag.name }}</span></a>
+                                        <nuxt-link :to="'/文章案例/tag/' + tag.slug"><span class="badge badge-pill badge-secondary">{{ tag.name }}</span></nuxt-link>
                                     </span>
                                 </section>
                             </div>
@@ -76,7 +76,7 @@
                                 <div class="col-8">
                                     <h6 class="mb-1">{{ post.title }}</h6>
                                     <span v-for="tag in post.tags" class="mr-1">
-                                        <a :href="'/文章案例/tag/' + tag.slug"><span class="badge badge-pill badge-secondary">{{ tag.name }}</span></a>
+                                        <nuxt-link :to="'/文章案例/tag/' + tag.slug"><span class="badge badge-pill badge-secondary">{{ tag.name }}</span></nuxt-link>
                                     </span>
                                 </div>
 
