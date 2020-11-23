@@ -1,8 +1,8 @@
 import GhostContentAPI from '@tryghost/content-api'
 
 const api = new GhostContentAPI({
-    url: 'https://dangerous-dolphin-41.loca.lt',
-    key: 'd869d9f1b57a23c05f418dfca2',
+    url: 'https://kennychang.ghost.io',
+    key: 'ccddbd6c9a6a36fb35794fb5d2',
     version: "v3"
 });
 

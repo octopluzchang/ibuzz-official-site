@@ -26,11 +26,11 @@
                                 <h3 class="mb-0">知識文章</h3>
                             </div>
                             <div class="col text-right">
-                                <nuxt-link :to="{ path: '文章案例/' }">查看更多</nuxt-link>
+                                <a :href="'/文章案例/tag/knowledge'">查看更多</a>
                             </div>
                         </div>
                         <div class="row mb-5">
-                            <div class="col-sm-6 mb-3" v-for="post in posts">
+                            <div class="col-sm-6 mb-3" v-for="post in posts_knowledge">
                                 <section>
                                     <a :href="'/文章案例/' + post.slug" class="postThumbnail">
                                         <img :src="post.feature_image">
@@ -47,11 +47,11 @@
                                 <h3 class="mb-0">情報文章</h3>
                             </div>
                             <div class="col text-right">
-                                <nuxt-link :to="{ path: '/文章案例/' }">查看更多</nuxt-link>
+                                <a :href="'/文章案例/tag/news'">查看更多</a>
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-sm-6 mb-3" v-for="post in posts">
+                            <div class="col-sm-6 mb-3" v-for="post in posts_news">
                                 <section>
                                     <a :href="'/文章案例/' + post.slug" class="postThumbnail">
                                         <img :src="post.feature_image">
@@ -101,10 +101,12 @@
             this.$store.commit('updateProductIndex', '文章案例')
         },
         async asyncData() {
-            const posts = await getPosts();
+            const posts_knowledge = await getPostsKnowledge();
+            const posts_news = await getPostsNews();
             const latest_posts = await getPostsLatest();
             return {
-                posts: posts,
+                posts_knowledge: posts_knowledge,
+                posts_news: posts_news,
                 latest_posts: latest_posts
             }
         }
