@@ -8,7 +8,8 @@
     "start": "nuxt start",
     "export": "nuxt export",
     "serve": "nuxt serve",
-    "generate": "nuxt build && nuxt export"
+    "generate": "nuxt build && nuxt export",
+    "heroku-postbuild": "nuxt build"
   },
   "dependencies": {
     "@nuxtjs/axios": "^5.12.2",
