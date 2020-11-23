@@ -121,5 +121,8 @@ export default {
    ** See https://nuxtjs.org/api/configuration-build/
    */
   build: {},
-  target: 'static'
+  target: 'static',
+  server: {
+    port: 8080
+  }
 }
