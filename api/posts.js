@@ -1,8 +1,8 @@
 import GhostContentAPI from '@tryghost/content-api'
 
 const api = new GhostContentAPI({
-    url: 'http://localhost:2368',
-    key: '545bbfc5a36507b95ac6e345de',
+    url: 'https://dangerous-dolphin-41.loca.lt',
+    key: 'd869d9f1b57a23c05f418dfca2',
     version: "v3"
 });
 
