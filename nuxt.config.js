@@ -120,8 +120,5 @@ export default {
    ** Build configuration
    ** See https://nuxtjs.org/api/configuration-build/
    */
-  build: {},
-  server: {
-    port:8080
-  }
+  build: {}
 }
