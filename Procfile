@@ -1,1 +1,1 @@
-web: nuxt export
+web: nuxt build

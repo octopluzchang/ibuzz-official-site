@@ -9,7 +9,7 @@
     "export": "nuxt export",
     "serve": "nuxt serve",
     "generate": "nuxt build && nuxt export",
-    "heroku-postbuild": "nuxt export"
+    "heroku-postbuild": "nuxt build"
   },
   "dependencies": {
     "@nuxtjs/axios": "^5.12.2",
