@@ -12,11 +12,12 @@
         <div v-html="single.html"></div>
         <hr>
         <div class="row mb-3 aling-items-top">
-          <div class="col-auto aling-items-center">
-            <div class="fb-share-button" :data-href="'https://i-buzz.herokuapp.com/文章案例/' + single.slug" data-layout="button_count" data-size="small"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a></div>
+          <div class="col-auto align-self-center">
+            <div class="fb-share-button mb-3" :data-href="'https://i-buzz.herokuapp.com/文章案例/' + single.slug" data-layout="button_count" data-size="small"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a></div>
           </div>
-          <div class="col-auto aling-items-center">
-            <div class="line-it-button" data-lang="en" data-type="share-a" data-ver="3" data-url="https://i-buzz.herokuapp.com/文章案例/" data-color="default" data-size="small" data-count="true" style="display: none;"></div>
+          <div class="col-auto align-self-center">
+
+            <div class="line-it-button mt-4" data-lang="en" data-type="share-a" data-ver="3" data-url="https://i-buzz.herokuapp.com/文章案例/" data-color="default" data-size="small" data-count="true" style="display: none;"></div>
           </div>
         </div>
         <div class="row aling-items-center">
