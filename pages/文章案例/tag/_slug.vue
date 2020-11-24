@@ -57,8 +57,6 @@ export default {
   async asyncData ({ params, store }) {
       const tag = await getTags(params.slug);
       const posts = await getPostsArchive(params.slug);
-      await store.dispatch('getPostsIndex', '1', params.slug);
-      console.log(store.state.postsIndex)
       return { tag: tag,  posts: posts}
     },
     data() {

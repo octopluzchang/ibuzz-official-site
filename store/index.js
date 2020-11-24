@@ -12,8 +12,6 @@ export const state = () => ({
   selectedService: 0,
   selectedFeature: 0,
   selectedReport: 0,
-  postsIndex: [],
-  pageIndex: [],
   products: [
     {
       name: 'i-Buzz',
@@ -3697,10 +3695,6 @@ export const mutations = {
   getFeatureIndex(state, id) {
     state.selectedFeature = id
   },
-  setPostsIndex(state, postsIndex) {
-    state.postsIndex = postsIndex
-    state.pageIndex = postsIndex.meta.pagination
-  },
   updateProductIndex(state, productName) {
     state.selectedProduct = state.products.map(function (e) {
       return e.name;
@@ -3737,22 +3731,5 @@ export const mutations = {
     }
     console.log('indexOfReport', state.selectedReport)
 
-  }
-}
-
-export const actions = {
-  async getPostsIndex({
-    commit
-  }, pagination, tagSlug) {
-    const posts = await api.posts.browse({
-      limit: 'all',
-      page: pagination,
-      include: 'tags',
-      filter: 'tag:' + tagSlug
-
-    }).catch(err => {
-      console.error(err);
-    });
-    commit('setPostsIndex', posts)
   }
 }
