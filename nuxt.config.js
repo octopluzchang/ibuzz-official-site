@@ -126,6 +126,10 @@ export default {
     }
     ]
   ],
+  loading: {
+    color: '#ddb306',
+    height: '5px'
+  },
   axios: {
     baseURL: 'http://localhost:4000', // Used as fallback if no runtime config is provided
     proxy: true
