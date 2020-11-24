@@ -122,6 +122,6 @@ export default {
    */
   build: {},
   server: {
-//    host: '0.0.0.0'
+    host: '0.0.0.0'
   }
 }
