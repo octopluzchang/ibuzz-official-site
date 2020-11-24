@@ -118,6 +118,7 @@ export default {
   ],
   axios: {
     baseURL: 'http://localhost:4000', // Used as fallback if no runtime config is provided
+    proxy: true
   },
 
   publicRuntimeConfig: {
