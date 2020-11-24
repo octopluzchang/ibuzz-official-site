@@ -52,6 +52,16 @@ export default {
       {
         src: "/js/raphael.icons.min.js",
         type: "text/javascript"
+      },
+      {
+        crossorigin:"anonymous",
+        src: "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v9.0",
+        nonce: "6gN7k3Xx"
+      },
+      {
+        async:"async",
+        src: "https://d.line-scdn.net/r/web/social-plugin/js/thirdparty/loader.min.js",
+        defer: "defer"
       }
     ]
   },

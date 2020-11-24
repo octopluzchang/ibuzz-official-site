@@ -17,7 +17,6 @@
           </div>
           <div class="col-auto aling-items-center">
             <div class="line-it-button" data-lang="en" data-type="share-a" data-ver="3" data-url="https://i-buzz.herokuapp.com/文章案例/" data-color="default" data-size="small" data-count="true" style="display: none;"></div>
-            <script src="https://d.line-scdn.net/r/web/social-plugin/js/thirdparty/loader.min.js" async="async" defer="defer"></script>
           </div>
         </div>
         <div class="row aling-items-center">
@@ -76,10 +75,12 @@
         posts: posts
       }
     },
-    methods: {
-      formatDate(date) {
-        return
-        date
+    mounted: function() {
+
+    },
+    data() {
+      return {
+        commentisshowen: false
       }
     }
   }

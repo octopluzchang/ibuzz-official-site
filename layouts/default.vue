@@ -11,7 +11,7 @@
     <Toast />
     <Footer />
     <div id="fb-root"></div>
-    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v9.0" nonce="6gN7k3Xx"></script>
+<!--    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v9.0" nonce="6gN7k3Xx"></script>-->
     <Form id="contactForm" v-if="$store.state.showForm" />
   </div>
 </template>
