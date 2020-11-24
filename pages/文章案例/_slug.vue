@@ -27,7 +27,7 @@
           <div class="col">
             <h5>
               <span v-for="tag in single.tags">
-                <a :href="'/文章案例/tag/' + tag.slug"><span class="badge badge-pill badge-secondary">{{ tag.name }}</span></a>
+                <nuxt-link :to="'/文章案例/tag/' + tag.slug"><span class="badge badge-pill badge-secondary">{{ tag.name }}</span></nuxt-link>
               </span>
             </h5>
           </div>
