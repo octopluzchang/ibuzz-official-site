@@ -116,6 +116,21 @@ export default {
     }
     ]
   ],
+  axios: {
+    baseURL: 'http://localhost:4000', // Used as fallback if no runtime config is provided
+  },
+
+  publicRuntimeConfig: {
+    axios: {
+      browserBaseURL: process.env.BROWSER_BASE_URL
+    }
+  },
+
+  privateRuntimeConfig: {
+    axios: {
+      baseURL: process.env.BASE_URL
+    }
+  },
   /*
    ** Build configuration
    ** See https://nuxtjs.org/api/configuration-build/
