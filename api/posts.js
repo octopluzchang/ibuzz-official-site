@@ -1,8 +1,8 @@
 import GhostContentAPI from '@tryghost/content-api'
 
 const api = new GhostContentAPI({
-    url: 'https://kennychang.ghost.io',
-    key: 'ccddbd6c9a6a36fb35794fb5d2',
+    url: 'https://ibuzz-articles.herokuapp.com',
+    key: 'b08c9a6aec1eae4eebd83fb5dd',
     version: "v3"
 });
 
