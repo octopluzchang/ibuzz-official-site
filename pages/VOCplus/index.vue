@@ -13,7 +13,8 @@
               產業口碑數據庫
             </h1>
             <h4 class="mb-5">
-              產業調查、競品分析、消費者研究，現在您有更好的選擇
+              比出你的品牌競爭力<br>
+              輕鬆掌握競品口碑數據平台
             </h4>
             <a href="javascript:;" class="button main large" @click="$store.commit('toggleForm')">聯繫我們</a>
           </div>

@@ -2,9 +2,9 @@
   <div>
     <div class="section highlighted">
       <div class="wrapper">
-        <div class="row align-items-center">
-          <div class="col-lg-6">
-            <h2>想知道i-Buzz更多實際應用？</h2>
+        <div class="row align-items-center justify-content-center">
+          <div class="col-lg-4">
+            <h1>想知道i-Buzz<br>更多實際應用？</h1>
             <a href="https://www.i-buzz.com.tw/brandranking/?tag=%E8%A1%8C%E9%8A%B7%E7%9F%A5%E8%AD%98" class="button main" target="_blank">實際案例分享</a>
           </div>
           <div class="col-lg-6">
@@ -15,13 +15,13 @@
     </div>
     <div class="section">
       <div class="wrapper">
-        <div class="row align-items-center">
+        <div class="row align-items-center justify-content-center">
           <div class="col-lg-6">
             <img src="/assets/images/img_footer-2.png">
           </div>
           <div class="col-lg-6">
-            <h2>更加了解你所處的市場環境與消費者</h2>
-            <p>我們承諾，提供您最具參考性的專業分析報告</p>
+            <h1>更加了解你所處的<br>市場環境與消費者</h1>
+            <h4 class="mb-4">我們承諾，提供您最具參考性的專業分析報告</h4>
             <a href="javascript:;" class="button main" @click="$store.commit('toggleForm')">聯繫 i-Buzz 了解更多</a>
           </div>
         </div>

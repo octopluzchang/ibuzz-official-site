@@ -32,7 +32,7 @@
          </div>
           <div class="section" v-for="(report, reportIndex) in $store.state.products[$store.state.selectedProduct].services[$store.state.selectedService].features[$store.state.selectedFeature].reports" :class="{light: reportIndex % 2 != 0}">
             <div class="wrapper" >
-             <div class="tag mr-2">應用案例 {{reportIndex+1}}</div>
+             <div class="tag mb-4">應用案例 {{reportIndex+1}}</div>
               <div class="row">
                 <div class="col-lg-6">
                   <h3>{{report.title}}</h3>
@@ -119,6 +119,7 @@
 <style lang="less">
   .toolContainer {
     border-left: 1px solid black;
+    padding-left: 15px;
     .row {
       position: relative;
       &::before {

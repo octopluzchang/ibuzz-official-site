@@ -87,12 +87,12 @@ export default {
     {
       src: './plugins/vue-slick.js'
     },
-      {
-      src: './plugins/fb-sdk.js'
-    },
     {
       src: '~/plugins/vue-chartjs.js',
       ssr: false
+    },
+    {
+      src: './plugins/vee-validate.js'
     }
   ],
   loading: '~/components/loading.vue',
@@ -150,7 +150,11 @@ export default {
    ** Build configuration
    ** See https://nuxtjs.org/api/configuration-build/
    */
-  build: {},
+  build: {
+    transpile: [
+    "vee-validate/dist/rules"
+  ],
+  },
   server: {
     host: '0.0.0.0'
   }

@@ -8,7 +8,9 @@
               i-Buzz 商業應用報告
             </h1>
             <h4 class="mb-5">
-              深入淺出的專業分析提供最精確的數據、最有價值的發現與建議
+              深入淺出的專業分析，<br>
+              提供最精確的數據、<br>
+              最有價值的發現與建議。
             </h4>
             <a href="javascript:;" class="button main large" @click="$store.commit('toggleForm')">聯繫我們</a>
           </div>
@@ -18,20 +20,20 @@
         </div>
       </div>
     </div>
-    <div class="section">
+    <div class="section light">
       <div class="wrapper">
-        <div class="row">
-          <div class="col-lg-6">
-            <p class="mb-0">
+        <div class="row justify-content-center">
+          <div class="col-8">
+            <h6 class="mb-0 text-center">
               i-Buzz商業應用報告(Business Applications Report)以縱橫大數據分析十餘載為基礎，將客戶各種商業行銷需求與疑難雜症劃分為六大分析面向，並彙整出針對不同問題與需求之分析應用報告，藉以對症下藥、用科學數據一一擊破客戶面臨之困境。
-            </p>
+            </h6>
           </div>
         </div>
       </div>
     </div>
     <div class="section">
       <div class="wrapper">
-       <h2>獨家五大優勢特色！</h2>
+       <h2>獨家四大優勢特色！</h2>
        <h4>為什麼i-Buzz是商業應用的首選？因為我們有…</h4>
         <div class="row  align-items-center">
 
@@ -82,9 +84,9 @@
          </div>
           <div class="col-lg-6">
            <h1>AI分析技術工具</h1>
-            <p>
+            <h6>
               i-Buzz以兼具效率與精準度的五大獨家分析技術，打破傳統口碑研究僅以討論度與正負評分析為主之框架，透過多面向的嚴謹運算公式與語意判別，更深入洞悉產業脈動與TA insight！
-            </p>
+            </h6>
           </div>
         </div>
         <div class="row">

@@ -2,15 +2,17 @@
   <div>
     <div class="section dark" id="banner">
       <div class="wrapper">
-        <Breadcrumbs />
+        <div class="mb-4">
+          <Breadcrumbs />
+        </div>
         <div class="row">
           <div class="col-lg-8">
             <h1 class="title">
               {{$store.state.products[$store.state.selectedProduct].services[$store.state.selectedService].features[$store.state.selectedFeature].tagline}}
             </h1>
-            <p>
+            <h6>
               {{$store.state.products[$store.state.selectedProduct].services[$store.state.selectedService].features[$store.state.selectedFeature].detail}}
-            </p>
+            </h6>
           </div>
         </div>
       </div>
@@ -32,16 +34,16 @@
           </div>
           <div class="section" v-for="(report, reportIndex) in $store.state.products[$store.state.selectedProduct].services[$store.state.selectedService].features[$store.state.selectedFeature].reports" :class="{light: reportIndex % 2 != 0}">
             <div class="wrapper">
-              <div class="tag mr-2">報告案例 {{reportIndex+1}}</div>
+              <div class="tag mb-4">報告類型 {{reportIndex+1}}</div>
               <div class="row">
-                <div class="col-lg-6">
+                <div class="col">
                   <h3>{{report.title}}</h3>
                   <p>
                     {{report.description}}
                   </p>
                 </div>
               </div>
-              <div class="row">
+              <div class="row mb-4">
                 <div class="col-lg-6">
                   <h6><b>分析主軸</b></h6>
                   <p>{{report.subjectsSum}}</p>
