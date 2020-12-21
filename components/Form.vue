@@ -175,8 +175,8 @@
     methods: {
       sendForm: function() {
         this.$mail.send({
-          from: this.contact_name + '<' + this.contact_email + '>',
-          subject: '【【i-Buzz產業調研中心 需求單】 ' + this.company_name + ' ' + this.contact_title + ' ' + this.contact_name,
+          from: '<Contact@i-buzz.com.tw>',
+          subject: '【i-Buzz產業調研中心 需求單】 ' + this.company_name + ' ' + this.contact_title + ' ' + this.contact_name,
           text: '來自' + this.company_name + ' ' + this.contact_title + ' ' + this.contact_name + '的需求' + '\n \n 需求產品：\n ' + '【商業應用報告】\n' + this.checked_product_report + '\n\n' + '【VOC+】\n' +  this.checked_product_voc + '\n \n 需求詳細說明：\n ' + this.detail_content + '\n \n 公司電話：\n ' + this.company_number + '分機' + this.company_ext + '\n \n 手機：\n ' + this.contact_cell + this.company_ext + '\n \n 電子信箱：\n ' + this.contact_email,
           to: 'Contact@i-buzz.com.tw'
 
