@@ -33,6 +33,16 @@ export default {
         property: 'og:image',
         content: '/thumbnail.jpg'
       },
+      {
+        hid: 'og:image:secure_url',
+        property: 'og:image:secure_url',
+        content: '/thumbnail.jpg'
+      },
+      {
+        hid: 'og:image:alt',
+        property: 'og:image:alt',
+        content: 'i-Buzz大數據產業調研中心'
+      }
     ],
     link: [
       {
