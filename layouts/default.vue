@@ -4,6 +4,7 @@
      voc: $store.state.selectedProduct == 2,
      articles: $store.state.selectedProduct == 3,
      }">
+    <img src="/thumbnail.jpg" style="visibility: hidden; width: 0; height: 0; position: absolute;">
     <div sticky-container>
       <Header />
       <nuxt id="main" />
