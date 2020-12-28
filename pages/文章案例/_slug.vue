@@ -8,6 +8,7 @@
           <span class="tag primaryTag mb-4">{{ single.primary_tag.name }}</span>
           <h1 class="mb-1">{{ single.title }}</h1>
           <p class="mb-5 small">發佈時間：{{ single.published_at }}</p>
+          <p>{{visitCount}}</p>
         </div>
         <div v-html="single.html"></div>
         <hr>
@@ -26,7 +27,7 @@
           </div>
           <div class="col">
             <h5>
-              <span v-for="tag in single.tags">
+              <span v-for="(tag, tagKey) in single.tags" :key="tagKey">
                 <nuxt-link :to="'/文章案例/tag/' + tag.slug"><span class="badge badge-pill badge-secondary">{{ tag.name }}</span></nuxt-link>
               </span>
             </h5>
@@ -41,13 +42,13 @@
       <div class="wrapper">
         <h3>相關文章</h3>
         <div class="row mb-5">
-          <div class="col-sm-4 mb-3" v-for="post in posts">
+          <div class="col-sm-4 mb-3" v-for="(post, key) in posts" :key="key">
             <section>
               <a :href="'/文章案例/' + post.slug" class="postThumbnail">
                 <img :src="post.feature_image">
               </a>
               <h6 class="mb-0 mt-2 mb-1">{{ post.title }}</h6>
-              <span v-for="tag in post.tags" class="mr-1">
+              <span v-for="(tag, key) in post.tags" class="mr-1" :key="key">
                 <nuxt-link :to="'/文章案例/tag/' + tag.slug"><span class="badge badge-pill badge-secondary">{{ tag.name }}</span></nuxt-link>
               </span>
             </section>
@@ -58,10 +59,7 @@
   </div>
 </template>
 <script>
-  import {
-    getSinglePost,
-    getRelatedPosts
-  } from '@/api/posts';
+  import {getSinglePost, getRelatedPosts} from '@/api/posts';
   export default {
     created: function() {
       this.$store.commit('updateProductIndex', '文章案例')
@@ -74,14 +72,6 @@
       return {
         single: single,
         posts: posts
-      }
-    },
-    mounted: function() {
-
-    },
-    data() {
-      return {
-        commentisshowen: false
       }
     }
   }
