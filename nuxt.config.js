@@ -14,7 +14,7 @@ export default {
    ** See https://nuxtjs.org/api/configuration-head
    */
   head: {
-    title: 'i-Buzz',
+    title: 'i-Buzz大數據產業調研中心 | 以知識驅動你的品牌競爭力',
     meta: [
       {
         charset: 'utf-8'
@@ -26,8 +26,13 @@ export default {
       {
         hid: 'description',
         name: 'description',
-        content: process.env.npm_package_description || '全方位網路聲譽管理專家'
-      }
+        content: '以數據知識為核心，策動產業調查、競品分析、消費者研究，提供具價值的發現與建議。'
+      },
+      {
+        hid: 'og:image',
+        property: 'og:image',
+        content: '/thumbnail.jpg'
+      },
     ],
     link: [
       {
