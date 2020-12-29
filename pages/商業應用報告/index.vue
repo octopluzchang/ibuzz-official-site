@@ -41,28 +41,28 @@
 
           <div class="col">
             <div class="row">
-              <div class="col-lg-6">
+              <div class="col-lg-6 mb-4">
               <img src="/assets/icons/icon_0-home-1.png" class="icon large">
                <h4>跨國界多平台來源資料</h4>
                 <p>
                   i-Buzz蒐集台灣、香港、澳門、中國大陸與泰國、新加坡、馬來西亞、印尼、越南、菲律賓之網路大數據，包括論壇、專欄、新聞、部落格、QA平台、Facebook、Youtube、Instagram等總計超過11萬個頻道來源，以跨國界、跨平台為根基，進行不同主題與構面之研究！
                 </p>
               </div>
-              <div class="col-lg-6">
+              <div class="col-lg-6 mb-4">
               <img src="/assets/icons/icon_0-home-2.png" class="icon large">
                <h4>多元資料混搭</h4>
                 <p>
                   大數據分析不僅僅只有文字與數字，也不僅止於網路輿情中！ i-Buzz結合多方系統庫與數據源，提供不同產業與消費族群的多類型分析資料，除網路大數據外，更結合圖像辨識、消費者線上瀏覽行為、線下人流資訊等多元資料並加以混合應用，提供客戶多面向的洞察基模！
                 </p>
               </div>
-              <div class="col-lg-6">
+              <div class="col-lg-6 mb-4">
               <img src="/assets/icons/icon_0-home-3.png" class="icon large">
                <h4>多元策略分析模組</h4>
                 <p>
                   i-Buzz專精於網路大數據，服務過3,500位以上品牌客戶與代理商，深知基礎輿情統計資料及分析工具無法滿足企業需求，因此我們全面升級質量化數據報告，將經典行銷理論應用於分析中，撇開純粹數字統計，用學術研究提升報告可信度與商業應用價值！
                 </p>
               </div>
-              <div class="col-lg-6">
+              <div class="col-lg-6 mb-4">
               <img src="/assets/icons/icon_0-home-4.png" class="icon large">
                <h4>獨家專家挑選語詞庫</h4>
                 <p>
@@ -124,7 +124,7 @@
       <div class="wrapper">
         <h2>六大分析帶您洞悉產業與消費者！</h2>
         <div class="row">
-          <div class="col-lg-4" v-for="(service, serviceIndex) in $store.state.products[1].services">
+          <div class="col-lg-4 mb-5" v-for="(service, serviceIndex) in $store.state.products[1].services" :key="serviceIndex">
            <img :src="'/assets/icons/icon_' + $store.state.selectedProduct + '-' +
                   serviceIndex + '.png'" class="icon large">
             <h4>i-Buzz{{service.title}}</h4>
