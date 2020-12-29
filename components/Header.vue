@@ -10,7 +10,7 @@
           </h4>
         </div>
         <div class="headerNavContainer desktopOnly col">
-          <nuxt-link :to="'/' + product.name" class="headerNavItem" v-for="(product, productIndex) in $store.state.products" v-show="productIndex !=0">{{product.slug}}</nuxt-link>
+          <nuxt-link :to="'/' + product.name" class="headerNavItem" v-for="(product, productIndex) in $store.state.products" v-show="productIndex !=0" :key="productIndex">{{product.slug}}</nuxt-link>
           <a href="https://www.accupass.com/organizer/detail/1807030736261448080453" class="headerNavItem" target="_blank">
             活動與課程
           </a>
@@ -36,12 +36,12 @@
           </div>
           <div class="col">
             <div class="row align-items-center justify-content-end">
-              <div class="navItem" v-for="(service, serviceIndex) in $store.state.products[$store.state.selectedProduct].services" @click="$store.commit('getServiceIndex', serviceIndex)">
+              <div class="navItem" v-for="(service, serviceIndex) in $store.state.products[$store.state.selectedProduct].services" @click="$store.commit('getServiceIndex', serviceIndex)" :key="serviceIndex">
                 <nuxt-link :to="'/' + $store.state.products[$store.state.selectedProduct].name +'/' + service.title">{{service.title}}<span class="icon ic_dropdown small" v-show="service.childMenu"></span>
                 </nuxt-link>
                 <div class="navMenu" v-show="service.childMenu">
                   <ul class="list links">
-                    <nuxt-link :to="'/' + $store.state.products[$store.state.selectedProduct].name +'/' + service.title + '/' + feature.title" v-for="(feature,featureIndex) in service.features" @click.native="$store.commit('getFeatureIndex', featureIndex)">
+                    <nuxt-link :to="'/' + $store.state.products[$store.state.selectedProduct].name +'/' + service.title + '/' + feature.title" v-for="(feature,featureIndex) in service.features" @click.native="$store.commit('getFeatureIndex', featureIndex)" :key="featureIndex">
                       <li>
                         {{feature.title}}
                       </li>
@@ -88,9 +88,9 @@
                       <h3>{{$store.state.products[1].name}}</h3>
                       <div class="row">
 
-                        <div class="col-lg-3 col-md-4 mr-3" v-for="(service, serviceIndex) in $store.state.products[1].services">
+                        <div class="col-lg-3 col-md-4 mr-3" v-for="(service, serviceIndex) in $store.state.products[1].services" :key="serviceIndex">
                           <h5>{{service.title}}</h5>
-                          <div v-for="(feature,featureIndex) in service.features">
+                          <div v-for="(feature,featureIndex) in service.features" :key="featureIndex">
                             <nuxt-link :to="'/' + $store.state.products[1].name +'/' + service.title + '/' + feature.title">
                               {{feature.title}}
                             </nuxt-link>
@@ -100,9 +100,9 @@
                       <h3>{{$store.state.products[2].name}}</h3>
                       <div class="row">
 
-                        <div class="col-lg-3 col-md-4 mr-3" v-for="(service, serviceIndex) in $store.state.products[2].services" v-show="serviceIndex<1">
+                        <div class="col-lg-3 col-md-4 mr-3" v-for="(service, serviceIndex) in $store.state.products[2].services" v-show="serviceIndex<1" :key="serviceIndex">
                           <h5>{{service.title}}</h5>
-                          <div v-for="(feature,featureIndex) in service.features">
+                          <div v-for="(feature,featureIndex) in service.features" :key="featureIndex">
                             <nuxt-link :to="'/' + $store.state.products[2].name +'/' + service.title + '/' + feature.title">
                               {{feature.title}}
                             </nuxt-link>

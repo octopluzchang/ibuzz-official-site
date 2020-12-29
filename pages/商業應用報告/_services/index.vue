@@ -34,12 +34,12 @@
           <div class="section" v-for="(feature, featureIndex) in $store.state.products[$store.state.selectedProduct].services[$store.state.selectedService].features" :class="{light: featureIndex % 2 != 0}">
               <div class="wrapper">
                 <div class="row mr-2">
-                  <div class="col-lg-6">
+                  <div class="col-lg-6 mb-5">
                   <img :src="'/assets/icons/icon_' + $store.state.selectedProduct + '-' +
                   $store.state.selectedService + '-' +
                   featureIndex
                     + '.png'" class="icon large">
-                    <h3>{{feature.title}}</h3>
+                    <h3><b>{{feature.title}}</b></h3>
                     <p>
                       {{feature.description}}
                     </p>
@@ -49,8 +49,8 @@
                   </div>
                 </div>
                 <div class="row mr-2">
-                  <div class="col-lg-6" v-for="report in feature.reports">
-                    <h5>{{report.title}}</h5>
+                  <div class="col-lg-6 mb-4" v-for="report in feature.reports">
+                    <h5><b>{{report.title}}</b></h5>
                     <p v-if="report.excert">{{report.excert}}</p>
                     <p v-else>{{report.description}}</p>
                   </div>
@@ -63,7 +63,9 @@
           <div class="col">
             <div class="row justify-content-end" v-if="$store.state.selectedService != 0">
               <div class="col-sm-auto col">
+                <nuxt-link :to="'/' + $store.state.products[$store.state.selectedProduct].name + '/' + $store.state.products[$store.state.selectedProduct].services[$store.state.selectedService-1].title" @click.native="$store.commit('getServiceIndex', $store.state.selectedService-1)">
                 <div class="icon ic_prev"></div>
+                </nuxt-link>
               </div>
               <div class="col-sm-auto col">
                 <div class="text-right">
@@ -83,7 +85,9 @@
                 </div>
               </div>
               <div class="col-sm-auto col">
+                <nuxt-link :to="'/' + $store.state.products[$store.state.selectedProduct].name + '/' + $store.state.products[$store.state.selectedProduct].services[$store.state.selectedService+1].title" @click.native="$store.commit('getServiceIndex', $store.state.selectedService+1)">
                 <div class="icon ic_next"></div>
+                </nuxt-link>
               </div>
             </div>
           </div>

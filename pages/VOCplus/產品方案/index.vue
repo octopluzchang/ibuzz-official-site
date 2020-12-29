@@ -20,12 +20,12 @@
           <div class="desktopOnly" v-sticky sticky-side="both">
             <div class="wrapper">
               <div id="sideBar">
-                <div class="mr-2" v-for="(feature,featureIndex) in $store.state.products[$store.state.selectedProduct].services[$store.state.selectedService].features">
+                <div v-for="(feature,featureIndex) in $store.state.products[$store.state.selectedProduct].services[$store.state.selectedService].features">
                   <h6 class="highlighted">{{feature.title}}</h6>
                   <ul class="list links">
 
                     <nuxt-link :to="'/' + $store.state.products[$store.state.selectedProduct].name + '/' + $store.state.products[$store.state.selectedProduct].services[$store.state.selectedService].title + '/' + feature.title + '/' + feature.reports[reportIndex].title" v-for="(report,reportIndex) in feature.reports">
-                      <li>{{report.title}}</li>
+                      <li >{{report.title}}</li>
 
 
                     </nuxt-link>
@@ -38,7 +38,7 @@
         <div id="main">
           <div class="section" v-for="(feature, featureIndex) in $store.state.products[$store.state.selectedProduct].services[$store.state.selectedService].features" :class="{light: featureIndex % 2 != 0}">
               <div class="wrapper">
-                <div class="row mr-2">
+                <div class="row mb-5">
                   <div class="col-lg-6">
                     <h3>{{feature.title}}</h3>
                     <p>
@@ -46,11 +46,13 @@
                     </p>
                   </div>
                 </div>
-                <div class="row mr-2">
-                  <div class="col-lg-6 mr-2" v-for="(report, reportIndex) in feature.reports">
-                    <h5>{{report.title}}</h5>
-                    <p v-if="report.excert">{{report.excert}}</p>
-                    <p v-else>{{report.description}}</p>
+                <div class="row">
+                  <div class="col-lg-6 mb-5" v-for="(report, reportIndex) in feature.reports">
+                    <h5><b>{{report.title}}</b></h5>
+                    <div class="mb-0">
+                      <p class="mb-2" v-if="report.excert">{{report.excert}}</p>
+                      <p class="mb-2" v-else>{{report.description}}</p>
+                    </div>
                     <nuxt-link :to="'/' + $store.state.products[$store.state.selectedProduct].name + '/' + $store.state.products[$store.state.selectedProduct].services[$store.state.selectedService].title + '/' + $store.state.products[$store.state.selectedProduct].services[$store.state.selectedService].features[featureIndex].title + '/' + report.title" class="main">
                     查看詳細分析
                     </nuxt-link>

@@ -16,19 +16,19 @@
       </div>
     </div>
     <div id="main">
-          <div class="section" v-for="(feature, featureIndex) in $store.state.products[$store.state.selectedProduct].services[$store.state.selectedService].features" :class="{light: featureIndex % 2 != 0}">
+          <div class="section pt-5 pb-5" v-for="(feature, featureIndex) in $store.state.products[$store.state.selectedProduct].services[$store.state.selectedService].features" :class="{dark: featureIndex % 2 != 0}">
               <div class="wrapper">
-                <div class="row mr-2">
+                <div class="row mb-3">
                   <div class="col-lg-6">
-                    <h3>{{feature.title}}</h3>
+                    <h2>{{feature.title}}</h2>
                     <p>
                       {{feature.description}}
                     </p>
                   </div>
                 </div>
-                <div class="row mr-2">
-                  <div class="col-lg-6" v-for="report in feature.reports">
-                    <h5>{{report.title}}</h5>
+                <div class="row">
+                  <div class="col-lg-6 mb-3" v-for="report in feature.reports">
+                    <h5><b>{{report.title}}</b></h5>
                     <p>{{report.description}}</p>
                   </div>
                 </div>

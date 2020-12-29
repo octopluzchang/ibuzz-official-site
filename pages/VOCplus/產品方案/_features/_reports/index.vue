@@ -21,7 +21,7 @@
           <div class="desktopOnly" v-sticky>
             <div class="wrapper">
               <div id="sideBar">
-                <div class="mr-2" v-for="(feature,featureIndex) in $store.state.products[$store.state.selectedProduct].services[$store.state.selectedService].features">
+                <div v-for="(feature,featureIndex) in $store.state.products[$store.state.selectedProduct].services[$store.state.selectedService].features">
                   <h6 class="highlighted">{{feature.title}}</h6>
                   <ul class="list links">
 

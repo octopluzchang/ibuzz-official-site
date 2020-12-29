@@ -27,14 +27,14 @@
           </div>
         </div>
         <div id="main">
-          <div class="section" v-if="$store.state.products[$store.state.selectedProduct].services[$store.state.selectedService].features[$store.state.selectedFeature].reports">
+          <div class="section pb-0" v-if="$store.state.products[$store.state.selectedProduct].services[$store.state.selectedService].features[$store.state.selectedFeature].reports">
             <div class="wrapper">
-              <h2>i-Buzz {{this.$route.params.features}}報告介紹</h2>
+              <h2 class="mb-0">i-Buzz {{this.$route.params.features}}報告介紹</h2>
             </div>
           </div>
-          <div class="section" v-for="(report, reportIndex) in $store.state.products[$store.state.selectedProduct].services[$store.state.selectedService].features[$store.state.selectedFeature].reports" :class="{light: reportIndex % 2 != 0}">
+          <div class="section pt-0" v-for="(report, reportIndex) in $store.state.products[$store.state.selectedProduct].services[$store.state.selectedService].features[$store.state.selectedFeature].reports" :class="{light: reportIndex % 2 != 0}">
             <div class="wrapper">
-              <div class="tag mb-4">報告類型 {{reportIndex+1}}</div>
+              <div class="tag mb-2">報告類型 {{reportIndex+1}}</div>
               <div class="row">
                 <div class="col">
                   <h3>{{report.title}}</h3>
@@ -47,8 +47,8 @@
                 <div class="col-lg-6">
                   <h6><b>分析主軸</b></h6>
                   <p>{{report.subjectsSum}}</p>
-                  <ol>
-                    <li v-for="subject in report.subjects">
+                  <ol class="list">
+                    <li class="mb-2" v-for="subject in report.subjects">
                       {{subject}}
                     </li>
                   </ol>
@@ -85,12 +85,12 @@
           <div class="section dark" v-if="$store.state.products[$store.state.selectedProduct].services[$store.state.selectedService].features[$store.state.selectedFeature].faqs.length">
             <div class="wrapper">
               <h2>常見問題集</h2>
-              <div class="faqContainer mr-2" v-for="faq in $store.state.products[$store.state.selectedProduct].services[$store.state.selectedService].features[$store.state.selectedFeature].faqs">
+              <div class="faqContainer mb-5" v-for="faq in $store.state.products[$store.state.selectedProduct].services[$store.state.selectedService].features[$store.state.selectedFeature].faqs">
                 <div class="row align-items-center">
                   <div class="col-auto">
                     <h3>Q</h3>
                   </div>
-                  <div class="col">
+                  <div class="col pl-0">
                     <h4><b>{{faq.q}}</b></h4>
                   </div>
                 </div>
@@ -98,7 +98,7 @@
                   <div class="col-auto">
                     <h3>A</h3>
                   </div>
-                  <div class="col">
+                  <div class="col pl-0">
                     <div v-for="item in faq.a">{{item}}</div>
                   </div>
                 </div>
