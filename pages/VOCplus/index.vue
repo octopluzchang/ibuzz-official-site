@@ -23,31 +23,43 @@
     </div>
     <div class="section light">
       <div class="wrapper">
-        <div class="row">
-         <div class="col-lg-6">
+        <div class="row align-items-center">
+         <div class="col-lg-7">
             <img src="/assets/images/img_2-home-1.png" v-show="selectedTab==1">
             <img src="/assets/images/img_2-home-2.png" v-show="selectedTab==2">
             <img src="/assets/images/img_2-home-3.png" v-show="selectedTab==3">
          </div>
-          <div class="col-lg-6">
+          <div class="col-lg-5">
            <div class="tabContainer">
              <div class="tab" :class="{active: selectedTab==1}" @click="selectedTab=1">
-               <h4>產業調查</h4>
-                <p>
-                  i-Buzz VOC+ 產業口碑數據庫，內建17大產業114個品類分析資料庫，總計4855個品牌，超過3萬個產品分析數據 ，及選及用，無須煩惱關鍵字語法設定。
-                </p>
+                <div class="row">
+                   <div class="col-lg">
+                     <h6><b>產業調查</b></h6>
+                      <small class="mb-0">
+                        i-Buzz VOC+ 產業口碑數據庫，內建17大產業114個品類分析資料庫，總計4855個品牌，超過3萬個產品分析數據 ，及選及用，無須煩惱關鍵字語法設定。
+                      </small>
+                   </div>
+                </div>
              </div>
              <div class="tab" :class="{active: selectedTab==2}" @click="selectedTab=2">
-               <h4>競品分析</h4>
-                <p>
-                  i-Buzz VOC+產業口碑數據庫以三階層「品牌、系列、產品」分類並管理產業各類關鍵字，立即產出常用分析報表，快速取得您所需要的競品分析數據。
-                </p>
+               <div class="row">
+                 <div class="col-lg">
+                   <h6><b>競品分析</b></h6>
+                    <small class="mb-0">
+                      i-Buzz VOC+產業口碑數據庫以三階層「品牌、系列、產品」分類並管理產業各類關鍵字，立即產出常用分析報表，快速取得您所需要的競品分析數據。
+                    </small>
+                 </div>
+               </div>
              </div>
              <div class="tab" :class="{active: selectedTab==3}" @click="selectedTab=3">
-               <h4>消費者研究</h4>
-                <p>
-                  i-Buzz VOC+產業口碑數據庫建置「環境、品牌、產品、消費者」四大面向語意分析詞庫，為各產業量身打造專屬的「專家語詞庫」，針對消費者的關注面向進行語意分析和應用。
-                </p>
+               <div class="row">
+                 <div class="col-lg">
+                   <h6><b>消費者研究</b></h6>
+                    <small class="mb-0">
+                      i-Buzz VOC+產業口碑數據庫建置「環境、品牌、產品、消費者」四大面向語意分析詞庫，為各產業量身打造專屬的「專家語詞庫」，針對消費者的關注面向進行語意分析和應用。
+                    </small>
+                 </div>
+               </div>
              </div>
            </div>
           </div>

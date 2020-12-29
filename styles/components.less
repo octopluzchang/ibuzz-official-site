@@ -55,13 +55,17 @@
 
 .tabContainer {
   .tab {
-    opacity: 0.5;
-    border-left: 10px solid transparent;
+    padding: 10px;
     padding-left: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 3px;
+    background-color: white;
+    opacity: 0.5;
+    position: relative;
     cursor: pointer;
     &.active {
-      border-left-color: @dark-grey;
+      z-index: 1;
+      box-shadow: 0 2px 3px rgba(0, 0, 0, 0.384);
+      transform: scale(1.05);
       cursor: auto;
       opacity: 1;
     }
