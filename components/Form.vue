@@ -72,8 +72,14 @@
             <ValidationProvider rules="oneOf:1,2" v-slot="{errors}">
               <select v-model="selectedProduct">
                <option value="0" disabled>請選擇服務</option>
-                <option :value="productIndex" v-for="(product, productIndex) in $store.state.products" v-if="productIndex<3&&productIndex>0">
+                <!-- <option :value="productIndex" v-for="(product, productIndex) in $store.state.products" v-if="productIndex<3&&productIndex>0">
                   {{product.name}}
+                </option> -->
+                <option value="1">
+                  商業應用報告
+                </option>
+                <option value="2">
+                  口碑分析工具
                 </option>
               </select>
               <div class="invalid_hint mt-3">{{errors[0]}}</div>
