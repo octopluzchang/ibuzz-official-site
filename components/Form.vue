@@ -18,7 +18,7 @@
 
             <div class="row">
               <div class="col-md-6">
-                <ValidationProvider rules="required" v-slot="{errors, invalid}" name="公司名稱">
+                <ValidationProvider rules="required" v-slot="{errors}" name="公司名稱">
                   <div>公司名稱<span class="invalid_hint">{{errors[0]}}</span></div>
                   <input type="text" class="w-100" v-model="company_name">
                 </ValidationProvider>
@@ -85,32 +85,32 @@
               <div class="invalid_hint mt-3">{{errors[0]}}</div>
             </ValidationProvider>
           </div>
-          <div class="section" v-for="service in $store.state.products[selectedProduct].services" v-show="selectedProduct==1">
+          <div class="section" v-for="(service, key) in $store.state.products[selectedProduct].services" v-show="selectedProduct==1" :key="key">
             <h4>{{service.title}}</h4>
             <div class="section light">
               <div class="row">
-                <div class="col-sm-4" v-for="feature in service.features">
+                <div class="col-sm-4" v-for="(feature, key) in service.features" :key="key">
                   <label><input type="checkbox" :value="feature.title" v-model="checked_product_report"> {{feature.title}}</label>
                 </div>
               </div>
             </div>
           </div>
-          <div v-for="(feature, featureIndex) in $store.state.products[2].services[1].features" v-show="selectedProduct==2">
+          <div v-for="(feature, featureIndex) in $store.state.products[2].services[1].features" v-show="selectedProduct==2" :key="featureIndex">
             <div class="section" v-if="featureIndex<2">
               <h4>{{feature.title}}</h4>
               <div class="section light">
                 <div class="row">
-                  <div class="col-sm-4" v-for="report in feature.reports">
+                  <div class="col-sm-4" v-for="(report, key) in feature.reports" :key="key">
                     <label><input type="checkbox" :value="report.title" v-model="checked_product_voc"> {{report.title}}</label>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="section" v-for="report in feature.reports" v-else>
+            <div class="section" v-for="(report, key) in feature.reports" :key="key" v-else>
               <h4>{{report.title}}</h4>
               <div class="section light">
                 <div class="row">
-                  <div class="col-sm-4" v-for="func in report.funcs">
+                  <div class="col-sm-4" v-for="(func, key) in report.funcs" :key="key">
                     <label><input type="checkbox" :value="func.name" v-model="checked_product_voc"> {{func.name}}</label>
                   </div>
                 </div>
