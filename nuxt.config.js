@@ -108,7 +108,10 @@ export default {
     },
     {
       src: './plugins/vee-validate.js'
-    }
+    },
+    { 
+      src: '~plugins/ga.js', mode: 'client'
+     }
   ],
   loading: '~/components/loading.vue',
   /*
