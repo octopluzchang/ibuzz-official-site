@@ -128,6 +128,7 @@ export default {
     // Doc: https://bootstrap-vue.js.org
     'bootstrap-vue/nuxt',
     '@nuxtjs/axios',
+    '@nuxtjs/sitemap',
     ['nuxt-mail', {
         smtp: {
           host: "www3.hibox.hinet.net",
