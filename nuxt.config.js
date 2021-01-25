@@ -108,7 +108,10 @@ export default {
     },
     {
       src: './plugins/vee-validate.js'
-    }
+    },
+    { 
+      src: '~plugins/ga.js', mode: 'client'
+     }
   ],
   loading: '~/components/loading.vue',
   /*
@@ -128,6 +131,7 @@ export default {
     // Doc: https://bootstrap-vue.js.org
     'bootstrap-vue/nuxt',
     '@nuxtjs/axios',
+    '@nuxtjs/sitemap',
     ['nuxt-mail', {
         smtp: {
           host: "www3.hibox.hinet.net",
