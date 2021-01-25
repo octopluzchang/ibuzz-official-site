@@ -142,7 +142,8 @@ export default {
           }
         },
     }
-    ]
+    ],
+    '@nuxtjs/sitemap',
   ],
   loading: {
     color: '#ddb306',
