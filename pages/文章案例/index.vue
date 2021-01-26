@@ -35,7 +35,9 @@
                                     <a :href="'/文章案例/' + post.slug" class="postThumbnail">
                                         <img :src="post.feature_image">
                                     </a>
-                                    <h6 class="mb-0 mt-2 mb-1">{{ post.title }}</h6>
+                                    <a :href="'/文章案例/' + post.slug">
+                                        <h6 class="mb-0 mt-2 mb-1">{{ post.title }}</h6>
+                                    </a>
                                     <span v-for="tag in post.tags" class="mr-1">
                                         <nuxt-link :to="'/文章案例/tag/' + tag.slug"><span class="badge badge-pill badge-secondary">{{ tag.name }}</span></nuxt-link>
                                     </span>
@@ -56,7 +58,9 @@
                                     <a :href="'/文章案例/' + post.slug" class="postThumbnail">
                                         <img :src="post.feature_image">
                                     </a>
-                                    <h6 class="mb-0 mt-2 mb-1">{{ post.title }}</h6>
+                                    <a :href="'/文章案例/' + post.slug">
+                                        <h6 class="mb-0 mt-2 mb-1">{{ post.title }}</h6>
+                                    </a>
                                     <span v-for="tag in post.tags" class="mr-1">
                                         <nuxt-link :to="'/文章案例/tag/' + tag.slug"><span class="badge badge-pill badge-secondary">{{ tag.name }}</span></nuxt-link>
                                     </span>
@@ -74,7 +78,9 @@
                                     </a>
                                 </div>
                                 <div class="col-8">
-                                    <h6 class="mb-1">{{ post.title }}</h6>
+                                    <a :href="'/文章案例/' + post.slug">
+                                        <h6 class="mb-1">{{ post.title }}</h6>
+                                    </a>
                                     <span v-for="tag in post.tags" class="mr-1">
                                         <nuxt-link :to="'/文章案例/tag/' + tag.slug"><span class="badge badge-pill badge-secondary">{{ tag.name }}</span></nuxt-link>
                                     </span>
