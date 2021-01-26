@@ -143,7 +143,30 @@ export default {
         },
     }
     ],
-    '@nuxtjs/sitemap',
+    ['@nuxtjs/sitemap',{
+      sitemap: {
+        path: '/sitemap.xml', // sitemap名稱，不用改
+        hostname: 'http://localhost:3000/', // 網址
+        cacheTime: 1000 * 60 * 15, // 站點路由更新頻率，只在 generate: false有用
+        gzip: true, // 生成 .xml.gz 檔的 sitemap
+        generate: true, // 允許使用 nuxt generate 生成
+        // 排除不要的頁面路由
+        exclude: [
+          '/secret',
+          '/admin/**'
+        ],
+        // 靜態頁面路徑
+        routes: [
+          '/page/1',
+          {
+            url: '/page/2',
+            changefreq: 'daily', // 可能變更的頻率
+            priority: 1, // 網頁的重要程度，0.1 - 1
+            lastmodISO: '2017-06-30T13:30:00.000Z'
+          }
+        ]
+      }
+    }]
   ],
   loading: {
     color: '#ddb306',
@@ -176,5 +199,5 @@ export default {
   },
   server: {
     host: '0.0.0.0'
-  }
+  },
 }
