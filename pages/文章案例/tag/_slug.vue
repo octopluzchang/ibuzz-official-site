@@ -15,7 +15,7 @@
     <div class="section">
       <div class="wrapper">
         <div class="row">
-          <div class="col-sm-4 mb-3" v-for="post in posts">
+          <div class="col-sm-4 mb-3" v-for="(post, key) in posts" :key="key">
                 <section>
                  <a :href="'/文章案例/' + post.slug" class="postThumbnail">
                     <img :src="post.feature_image">
@@ -23,7 +23,7 @@
                   <a :href="'/文章案例/' + post.slug">
                   <h6 class="mb-0 mt-2 mb-1">{{ post.title }}</h6>
                   </a>
-                  <span v-for="tag in post.tags" class="mr-1">
+                  <span v-for="(tag, key) in post.tags" class="mr-1" :key="key">
                     <nuxt-link :to="'/文章案例/tag/' + tag.slug"><span class="badge badge-pill badge-secondary">{{ tag.name }}</span></nuxt-link>
                   </span>
                 </section>
