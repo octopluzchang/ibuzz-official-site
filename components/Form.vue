@@ -90,7 +90,7 @@
               <input type="checkbox">
               以上都沒有符合，我的需求其實是：
             </label>
-            <textarea class="w-100" placeholder="請輸入需求詳細說明" v-model="detail_content"></textarea>
+            <textarea class="w-100" placeholder="請輸入需求詳細說明" v-model="checked_requirements_other"></textarea>
           </div>
           <div class="section">
             <div class="row">
@@ -130,6 +130,12 @@
               <div>
                 <label>
                   <input type="radio" name="used_products">
+                  否
+                </label>
+              </div>
+              <div>
+                <label>
+                  <input type="radio" name="used_products">
                   是
                 </label>
                 <label>
@@ -144,14 +150,12 @@
                   <input type="checkbox">
                   其他
                 </label>
-                <input type="text" v-model="used_products">
+                <input type="text" v-model="other_used_products">
               </div>
-              <div>
-                <label>
-                  <input type="radio" name="used_products">
-                  否
-                </label>
-              </div>
+            </div>
+            <div class="mb-4" v-show="used_products.length">
+              <div><b>想要轉換的原因</b></div>
+              <textarea class="w-100" placeholder="" v-model="transition_reason"></textarea>
             </div>
             <div class="mb-4">
               <div><b>其他說明</b></div>
@@ -211,8 +215,11 @@
         focused_websites: '',
         focused_products: '',
         used_products: [],
+        other_used_products: '',
+        transition_reason: '',
         other_requirements:'',
         checked_requirements: [],
+        checked_requirements_other: '',
         requirements: [
           {
             title: '電子報與數據訂閱',
@@ -241,7 +248,6 @@
                 '租賃一個查詢平台，協助公司各部門產出日常工作中所需的分析報表',
                 '租賃一個查詢平台，隨時蒐集消費者的熱門討論話題',
                 '租賃一個查詢平台，分析消費者的關鍵字討論重點',
-                '租賃一個查詢平台，分析消費者的關鍵字討論重點'
                 ],
               }
             ]
@@ -301,8 +307,57 @@
         this.$mail.send({
           from: '<Contact@i-buzz.com.tw>',
           subject: '【i-Buzz產業調研中心 需求單】 ' + this.company_name + ' ' + this.contact_title + ' ' + this.contact_name,
-          text: '來自' + this.company_name + ' ' + this.contact_title + ' ' + this.contact_name + '的需求' + '\n \n 需求產品：\n ' + this.checked_requirements + '\n \n 主品牌/關注主題名稱：\n ' + this.focused_topics + '\n \n 初估預算：\n ' + this.budget + '\n \n 預計合作走期/觀察區間：\n ' + this.period + '\n \n 需求詳細說明：\n ' + this.detail_content + '\n \n 關注的競品/議題：\n ' + this.focused_products + '\n \n 是否有特別關注的網站或板塊：\n ' + this.focused_websites + '\n \n 是否有使用過其他間口碑數據分析廠商？\n ' + this.used_products + '\n \n 其他說明：\n ' + this.other_requirements + '\n \n 公司電話：\n ' + this.company_number + '分機' + this.company_ext + '\n \n 手機：\n ' + this.contact_cell + this.company_ext + '\n \n 電子信箱：\n ' + this.contact_email,
-          to: 'Contact@i-buzz.com.tw'
+          html: 
+            `
+            <h1>i-Buzz產業調研中心 需求單</h1>
+            <h3>需求者</h3>
+            <p>${ this.company_name } ${ this.contact_title } ${ this.contact_name }</p>
+            <hr>
+            <h3>需求產品</h3>
+            <ul>
+            <li>${ this.checked_requirements.join('</li><li>') }</li>
+            <li>${ this.checked_requirements_other }</li>
+            </ul>
+            <hr>
+            <h3>主品牌/關注主題名稱</h3>
+            <p>${ this.focused_topics }</p>
+            <hr>
+            <h3>初估預算</h3>
+            <p>${ this.budget }</p>
+            <hr>
+            <h3>預計合作走期/觀察區間</h3>
+            <p>${ this.period }</p>
+            <hr>
+            <h3>需求詳細說明</h3>
+            <p>${ this.detail_content }</p>
+            <hr>
+            <h3>關注的競品/議題</h3>
+            <p>${ this.focused_products }</p>
+            <hr>
+            <h3>是否有特別關注的網站或板塊</h3>
+            <p>${ this.focused_websites }</p>
+            <hr>
+            <h3>是否有使用過其他間口碑數據分析廠商</h3>
+            <ul>
+            <li>${ this.used_products.join('</li><li>') }</li>
+            <li>${ this.other_used_products }</li>
+            </ul>
+            <hr>
+            <h3>想要轉換的原因</h3>
+            <p>${ this.transition_reason }</p>
+            <hr>
+            <h3>其他說明</h3>
+            <p>${ this.other_requirements }</p>
+            <hr>
+            <h3>聯絡方式</h3>
+            <ul>
+            <li>公司電話：${ this.company_number } # ${ this.company_ext }</li>
+            <li>公司信箱：${ this.contact_email }</li>
+            <li>手機：${ this.contact_cell }</li>
+            </ul>
+            ` 
+            ,
+          to: 'Contact@i-buzz.com.tw',
 
         })
         this.$store.commit('toggleForm')
