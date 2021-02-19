@@ -3775,6 +3775,11 @@ export const mutations = {
   toggleForm(state) {
     state.showForm = !state.showForm
     $('body').toggleClass('freeze')
+    this.$ga.event({
+      eventCategory: 'click',
+      eventAction: 'nav click',
+      eventLabel: 'Demand list'
+    })
   },
   getProductIndex(state, id) {
     state.selectedProduct = id

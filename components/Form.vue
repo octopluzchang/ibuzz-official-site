@@ -360,6 +360,11 @@
           to: 'Contact@i-buzz.com.tw',
 
         })
+        this.$ga.event({
+          eventCategory: 'click',
+          eventAction: 'send',
+          eventLabel: 'Demand list'
+          })
         this.$store.commit('toggleForm')
         $('.toastContainer').addClass('show')
         setTimeout(function(){
