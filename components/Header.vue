@@ -15,7 +15,7 @@
             活動與課程
           </a>
           <a href="http://industryresearch.i-buzz.com.tw/whitepaper" class="headerNavItem" target="_blank">
-            i-Buzz診聊事
+            i-Buzz白皮書
           </a>
         </div>
         <div class="col-auto text-right">
