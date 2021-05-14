@@ -14,8 +14,8 @@
           <a href="https://www.accupass.com/organizer/detail/1807030736261448080453" class="headerNavItem" target="_blank">
             活動與課程
           </a>
-          <a href="http://haveachat.i-buzz.com.tw/whitepaper" class="headerNavItem" target="_blank">
-            i-Buzz白皮書
+          <a href="http://industryresearch.i-buzz.com.tw/whitepaper" class="headerNavItem" target="_blank">
+            i-Buzz診聊事
           </a>
         </div>
         <div class="col-auto text-right">
